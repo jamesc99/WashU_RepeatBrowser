@@ -1,0 +1,63 @@
+{
+  "data": [
+    {
+      "subfamUniq": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF014UWV/ENCFF014UWV.iteres.uniq.bw",
+      "subfamAll": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF014UWV/ENCFF014UWV.iteres.bw",
+      "subfamLoci": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF014UWV/ENCFF014UWV.ALL.iteres.loci.gz",
+      "subfamStat": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF014UWV/ENCFF014UWV.subfamily.json",
+      "Assay": "ChIP-seq",
+      "Biosample_type": "cell line",
+      "Experiment": "ENCSR000EGK",
+      "Tissue": "K562",
+      "Organism": "Homo sapiens",
+      "Target": "IRF1-human",
+      "File_accession": "ENCFF014UWV",
+      "id": "ENCFF014UWV",
+      "_id": 1099,
+      "$sortOn": ""
+    },
+    {
+      "subfamUniq": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF018FMM/ENCFF018FMM.iteres.uniq.bw",
+      "subfamAll": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF018FMM/ENCFF018FMM.iteres.bw",
+      "subfamLoci": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF018FMM/ENCFF018FMM.ALL.iteres.loci.gz",
+      "subfamStat": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF018FMM/ENCFF018FMM.subfamily.json",
+      "Assay": "ChIP-seq",
+      "Biosample_type": "cell line",
+      "Experiment": "ENCSR513KNS",
+      "Tissue": "PC-9",
+      "Organism": "Homo sapiens",
+      "Target": "H3K4me2-human",
+      "File_accession": "ENCFF018FMM",
+      "id": "ENCFF018FMM",
+      "_id": 1103,
+      "$sortOn": ""
+    },
+    {
+      "subfamUniq": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF015QPY/ENCFF015QPY.iteres.uniq.bw",
+      "subfamAll": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF015QPY/ENCFF015QPY.iteres.bw",
+      "subfamLoci": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF015QPY/ENCFF015QPY.ALL.iteres.loci.gz",
+      "subfamStat": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF015QPY/ENCFF015QPY.subfamily.json",
+      "Assay": "ChIP-seq",
+      "Biosample_type": "cell line",
+      "Experiment": "ENCSR513UQG",
+      "Tissue": "IMR-90",
+      "Organism": "Homo sapiens",
+      "Target": "USF2-human",
+      "File_accession": "ENCFF015QPY",
+      "id": "ENCFF015QPY",
+      "_id": 1100,
+      "$sortOn": ""
+    }
+  ],
+  "repeats": [
+    { "name": "MER125", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER126", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER130", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER135", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER136", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "UCON78", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "UCON8", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "UCON97", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "UCON99", "family": "DNA", "class": "DNA", "size": 7 }
+  ]
+}

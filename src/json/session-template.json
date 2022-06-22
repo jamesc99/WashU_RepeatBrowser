@@ -1,0 +1,64 @@
+{
+  "genomeName": "hg38",
+  "viewInterval": { "start": 0, "end": 139071 },
+  "tracks": [
+    {
+      "name": "gencodeV29",
+      "type": "geneannotation",
+      "label": "gencodeV29",
+      "options": { "maxRows": 10, "label": "gencodeV29" },
+      "url": "",
+      "metadata": { "Track type": "geneannotation" },
+      "isSelected": false,
+      "fileObj": "",
+      "files": [],
+      "tracks": [],
+      "isText": false,
+      "textConfig": {},
+      "genome": "hg38"
+    },
+    {
+      "name": "RepeatMasker",
+      "type": "repeatmasker",
+      "label": "RepeatMasker",
+      "options": { "label": "RepeatMasker" },
+      "url": "https://vizhub.wustl.edu/public/hg38/rmsk16.bb",
+      "metadata": { "Track type": "repeatmasker" },
+      "isSelected": false,
+      "fileObj": "",
+      "files": [],
+      "tracks": [],
+      "isText": false,
+      "textConfig": {}
+    },
+    {
+      "name": "Ruler",
+      "type": "ruler",
+      "label": "Ruler",
+      "options": { "label": "Ruler" },
+      "url": "",
+      "metadata": { "Track type": "ruler" },
+      "isSelected": false,
+      "fileObj": "",
+      "files": [],
+      "tracks": [],
+      "isText": false,
+      "textConfig": {}
+    }
+  ],
+  "metadataTerms": [],
+  "regionSets": [
+    {
+      "name": "test",
+      "features": [
+        
+      ],
+      "genomeName": "hg38",
+      "flankingStrategy": { "type": 0, "upstream": 0, "downstream": 0 }
+    }
+  ],
+  "regionSetViewIndex": 0,
+  "trackLegendWidth": 120,
+  "bundleId": "",
+  "isShowingNavigator": true
+}

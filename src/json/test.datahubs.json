@@ -1,0 +1,319 @@
+{
+  "files": [
+    {
+      "File_accession": "ENCFF700UBO",
+      "Experiment": "ENCSR168STG",
+      "Assay": "ChIP-seq",
+      "Biosample": "parathyroid adenoma",
+      "Biosample_type": "tissue",
+      "Organism": "Homo sapiens",
+      "subfamUniq": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF700UBO/ENCFF700UBO.iteres.uniq.bw",
+      "subfamAll": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF700UBO/ENCFF700UBO.iteres.bw",
+      "subfamLoci": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF700UBO/ENCFF700UBO.ALL.iteres.loci.gz",
+      "subfamStat": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF700UBO/ENCFF700UBO.subfamily.json",
+      "metadata": {
+        "Experiment": "ENCSR168STG",
+        "Biosample": "parathyroid adenoma",
+        "Biosample_type": "tissue",
+        "Assay": "ChIP-seq",
+        "Genome": "hg38",
+        "Assay_type": "dna_binding"
+      },
+      "Project": "ENCODE",
+      "Genome": "hg38",
+      "name": "ENCFF700UBO",
+      "Controls": []
+    },
+    {
+      "File_accession": "ENCFF083RXK",
+      "Experiment": "ENCSR168STG",
+      "Assay": "ChIP-seq",
+      "Biosample": "22Rv1",
+      "Biosample_type": "cell line",
+      "Organism": "Homo sapiens",
+      "subfamUniq": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF083RXK/ENCFF083RXK.iteres.uniq.bw",
+      "subfamAll": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF083RXK/ENCFF083RXK.iteres.bw",
+      "subfamLoci": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF083RXK/ENCFF083RXK.ALL.iteres.loci.gz",
+      "subfamStat": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF083RXK/ENCFF083RXK.subfamily.json",
+      "metadata": {
+        "Experiment": "ENCSR168STG",
+        "Biosample": "22Rv1",
+        "Biosample_type": "cell line",
+        "Assay": "ChIP-seq",
+        "Genome": "hg38",
+        "Assay_type": "dna_binding"
+      },
+      "Project": "ENCODE",
+      "Genome": "hg38",
+      "name": "ENCFF083RXK",
+      "Controls": []
+    },
+    {
+      "File_accession": "ENCFF380EDG",
+      "Experiment": "ENCSR000EZJ",
+      "Assay": "ChIP-seq",
+      "Biosample": "HeLa-S3",
+      "Biosample_type": "cell line",
+      "Organism": "Homo sapiens",
+      "subfamUniq": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF380EDG/ENCFF380EDG.iteres.uniq.bw",
+      "subfamAll": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF380EDG/ENCFF380EDG.iteres.bw",
+      "subfamLoci": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF380EDG/ENCFF380EDG.ALL.iteres.loci.gz",
+      "subfamStat": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF380EDG/ENCFF380EDG.subfamily.json",
+      "metadata": {
+        "Experiment": "ENCSR000EZJ",
+        "Biosample": "HeLa-S3",
+        "Biosample_type": "cell line",
+        "Assay": "ChIP-seq",
+        "Genome": "hg38",
+        "Assay_type": "dna_binding"
+      },
+      "Project": "ENCODE",
+      "Genome": "hg38",
+      "name": "ENCFF380EDG",
+      "Controls": ["ENCSR168STG"]
+    },
+    {
+      "File_accession": "ENCFF095MVW",
+      "Experiment": "ENCSR658AGP",
+      "Assay": "ChIP-seq",
+      "Biosample": "adipose tissue",
+      "Biosample_type": "tissue",
+      "Organism": "Homo sapiens",
+      "subfamUniq": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF095MVW/ENCFF095MVW.iteres.uniq.bw",
+      "subfamAll": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF095MVW/ENCFF095MVW.iteres.bw",
+      "subfamLoci": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF095MVW/ENCFF095MVW.ALL.iteres.loci.gz",
+      "subfamStat": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF095MVW/ENCFF095MVW.subfamily.json",
+      "metadata": {
+        "Experiment": "ENCSR658AGP",
+        "Biosample": "adipose tissue",
+        "Biosample_type": "tissue",
+        "Assay": "ChIP-seq",
+        "Genome": "hg38",
+        "Assay_type": "dna_binding"
+      },
+      "Project": "ENCODE",
+      "Genome": "hg38",
+      "name": "ENCFF095MVW",
+      "Controls": []
+    },
+    {
+      "File_accession": "ENCFF584IGM",
+      "Experiment": "ENCSR658AGP",
+      "Assay": "ChIP-seq",
+      "Biosample": "K562",
+      "Biosample_type": "cell line",
+      "Organism": "Homo sapiens",
+      "subfamUniq": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF584IGM/ENCFF584IGM.iteres.uniq.bw",
+      "subfamAll": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF584IGM/ENCFF584IGM.iteres.bw",
+      "subfamLoci": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF584IGM/ENCFF584IGM.ALL.iteres.loci.gz",
+      "subfamStat": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF584IGM/ENCFF584IGM.subfamily.json",
+      "metadata": {
+        "Experiment": "ENCSR658AGP",
+        "Biosample": "K562",
+        "Biosample_type": "cell line",
+        "Assay": "ChIP-seq",
+        "Genome": "hg38",
+        "Assay_type": "dna_binding"
+      },
+      "Project": "ENCODE",
+      "Genome": "hg38",
+      "name": "ENCFF584IGM",
+      "Controls": []
+    },
+    {
+      "File_accession": "ENCFF175XXJ",
+      "Experiment": "ENCSR585FQO",
+      "Assay": "ChIP-seq",
+      "Biosample": "C4-2B",
+      "Biosample_type": "cell line",
+      "Organism": "Homo sapiens",
+      "subfamUniq": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF175XXJ/ENCFF175XXJ.iteres.uniq.bw",
+      "subfamAll": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF175XXJ/ENCFF175XXJ.iteres.bw",
+      "subfamLoci": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF175XXJ/ENCFF175XXJ.ALL.iteres.loci.gz",
+      "subfamStat": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF175XXJ/ENCFF175XXJ.subfamily.json",
+      "metadata": {
+        "Experiment": "ENCSR585FQO",
+        "Biosample": "C4-2B",
+        "Biosample_type": "cell line",
+        "Assay": "ChIP-seq",
+        "Genome": "hg38",
+        "Assay_type": "dna_binding"
+      },
+      "Project": "ENCODE",
+      "Genome": "hg38",
+      "name": "ENCFF175XXJ",
+      "Controls": []
+    },
+    {
+      "File_accession": "ENCFF942SDK",
+      "Experiment": "ENCSR585FQO",
+      "Assay": "ChIP-seq",
+      "Biosample": "epithelial cell of prostate",
+      "Biosample_type": "primary cell",
+      "Organism": "Homo sapiens",
+      "subfamUniq": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF942SDK/ENCFF942SDK.iteres.uniq.bw",
+      "subfamAll": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF942SDK/ENCFF942SDK.iteres.bw",
+      "subfamLoci": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF942SDK/ENCFF942SDK.ALL.iteres.loci.gz",
+      "subfamStat": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF942SDK/ENCFF942SDK.subfamily.json",
+      "metadata": {
+        "Experiment": "ENCSR585FQO",
+        "Biosample": "epithelial cell of prostate",
+        "Biosample_type": "primary cell",
+        "Assay": "ChIP-seq",
+        "Genome": "hg38",
+        "Assay_type": "dna_binding"
+      },
+      "Project": "ENCODE",
+      "Genome": "hg38",
+      "name": "ENCFF942SDK",
+      "Controls": []
+    },
+    {
+      "File_accession": "ENCFF521VJP",
+      "Experiment": "ENCSR827FNU",
+      "Assay": "ChIP-seq",
+      "Biosample": "suprapubic skin",
+      "Biosample_type": "tissue",
+      "Organism": "Homo sapiens",
+      "subfamUniq": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF521VJP/ENCFF521VJP.iteres.uniq.bw",
+      "subfamAll": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF521VJP/ENCFF521VJP.iteres.bw",
+      "subfamLoci": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF521VJP/ENCFF521VJP.ALL.iteres.loci.gz",
+      "subfamStat": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF521VJP/ENCFF521VJP.subfamily.json",
+      "metadata": {
+        "Experiment": "ENCSR827FNU",
+        "Biosample": "suprapubic skin",
+        "Biosample_type": "tissue",
+        "Assay": "ChIP-seq",
+        "Genome": "hg38",
+        "Assay_type": "dna_binding"
+      },
+      "Project": "ENCODE",
+      "Genome": "hg38",
+      "name": "ENCFF521VJP",
+      "Controls": []
+    },
+    {
+      "File_accession": "ENCFF506BDF",
+      "Experiment": "ENCSR000DKC",
+      "Assay": "ChIP-seq",
+      "Biosample": "spleen",
+      "Biosample_type": "tissue",
+      "Organism": "Homo sapiens",
+      "subfamUniq": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF506BDF/ENCFF506BDF.iteres.uniq.bw",
+      "subfamAll": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF506BDF/ENCFF506BDF.iteres.bw",
+      "subfamLoci": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF506BDF/ENCFF506BDF.ALL.iteres.loci.gz",
+      "subfamStat": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF506BDF/ENCFF506BDF.subfamily.json",
+      "metadata": {
+        "Experiment": "ENCSR376QKK",
+        "Biosample": "spleen",
+        "Biosample_type": "tissue",
+        "Assay": "ChIP-seq",
+        "Genome": "hg38",
+        "Assay_type": "dna_binding"
+      },
+      "Project": "ENCODE",
+      "Genome": "hg38",
+      "name": "ENCFF506BDF",
+      "Controls": []
+    },
+    {
+      "File_accession": "ENCFF686CFO",
+      "Experiment": "ENCSR000DKC",
+      "Assay": "ChIP-seq",
+      "Biosample": "K562",
+      "Biosample_type": "cell line",
+      "Organism": "Homo sapiens",
+      "subfamUniq": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF686CFO/ENCFF686CFO.iteres.uniq.bw",
+      "subfamAll": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF686CFO/ENCFF686CFO.iteres.bw",
+      "subfamLoci": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF686CFO/ENCFF686CFO.ALL.iteres.loci.gz",
+      "subfamStat": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF686CFO/ENCFF686CFO.subfamily.json",
+      "metadata": {
+        "Experiment": "ENCSR000DKC",
+        "Biosample": "K562",
+        "Biosample_type": "cell line",
+        "Assay": "ChIP-seq",
+        "Genome": "hg38",
+        "Assay_type": "dna_binding"
+      },
+      "Project": "ENCODE",
+      "Genome": "hg38",
+      "name": "ENCFF686CFO",
+      "Controls": []
+    },
+    {
+      "File_accession": "ENCFF316TSB",
+      "Experiment": "ENCSR118WAD",
+      "Assay": "ChIP-seq",
+      "Biosample": "ovary",
+      "Biosample_type": "tissue",
+      "Organism": "Homo sapiens",
+      "subfamUniq": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF316TSB/ENCFF316TSB.iteres.uniq.bw",
+      "subfamAll": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF316TSB/ENCFF316TSB.iteres.bw",
+      "subfamLoci": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF316TSB/ENCFF316TSB.ALL.iteres.loci.gz",
+      "subfamStat": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF316TSB/ENCFF316TSB.subfamily.json",
+      "metadata": {
+        "Experiment": "ENCSR118WAD",
+        "Biosample": "ovary",
+        "Biosample_type": "tissue",
+        "Assay": "ChIP-seq",
+        "Genome": "hg38",
+        "Assay_type": "dna_binding"
+      },
+      "Project": "ENCODE",
+      "Genome": "hg38",
+      "name": "ENCFF316TSB",
+      "Controls": []
+    },
+    {
+      "File_accession": "ENCFF487IET",
+      "Experiment": "ENCSR300XAV",
+      "Assay": "ChIP-seq",
+      "Biosample": "LNCAP",
+      "Biosample_type": "cell line",
+      "Organism": "Homo sapiens",
+      "subfamUniq": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF487IET/ENCFF487IET.iteres.uniq.bw",
+      "subfamAll": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF487IET/ENCFF487IET.iteres.bw",
+      "subfamLoci": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF487IET/ENCFF487IET.ALL.iteres.loci.gz",
+      "subfamStat": "https://s3.amazonaws.com/repeat-browser-data/hg38/dna_binding/ENCFF487IET/ENCFF487IET.subfamily.json",
+      "metadata": {
+        "Experiment": "ENCSR300XAV",
+        "Biosample": "LNCAP",
+        "Biosample_type": "cell line",
+        "Assay": "ChIP-seq",
+        "Genome": "hg38",
+        "Assay_type": "dna_binding"
+      },
+      "Project": "ENCODE",
+      "Genome": "hg38",
+      "name": "ENCFF487IET",
+      "Controls": ["ENCSR118WAD"]
+    }
+  ],
+
+  "experiments": [
+    {
+   
+        "replicates": ["ENCFF700UBO", "ENCFF083RXK"],
+        "controls": ["ENCFF380EDG", "ENCFF095MVW"],
+    
+      "public_accession": "ENCSR168STG",
+      "Biosample": "parathyroid adenoma",
+      "Biosample_type": "tissue",
+      "Assay": "ChIP-seq",
+      "Genome": "hg38",
+      "Assay_type": "dna_binding"
+    },
+    {
+      
+        "replicates": ["ENCFF584IGM", "ENCFF175XXJ"],
+        "controls": ["ENCFF942SDK", "ENCFF521VJP"],
+      
+      "public_accession": "ENCSR658AGP",
+        "Biosample": "adipose tissue",
+        "Biosample_type": "tissue",
+        "Assay": "ChIP-seq",
+        "Genome": "hg38",
+        "Assay_type": "dna_binding"
+    }
+  ]
+}

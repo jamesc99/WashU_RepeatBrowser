@@ -1,0 +1,88 @@
+{
+  "name": "crossfilter2",
+  "version": "1.5.2",
+  "description": "Fast multidimensional filtering for coordinated views.",
+  "license": "Apache-2.0",
+  "keywords": [
+    "analytics",
+    "visualization",
+    "crossfilter"
+  ],
+  "author": {
+    "name": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike"
+  },
+  "contributors": [
+    {
+      "name": "Jason Davies",
+      "url": "http://www.jasondavies.com/"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Gordon Woodhull",
+      "url": "https://github.com/gordonwoodhull"
+    },
+    {
+      "name": "Tanner Linsley",
+      "url": "https://github.com/tannerlinsley"
+    },
+    {
+      "name": "Ethan Jewett",
+      "url": "https://github.com/esjewett"
+    }
+  ],
+  "homepage": "https://crossfilter.github.io/crossfilter/",
+  "main": "./crossfilter.js",
+  "module": "main.js",
+  "types": "./index.d.ts",
+  "unpkg": "./crossfilter.min.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/crossfilter/crossfilter.git"
+  },
+  "dependencies": {
+    "@ranfdev/deepobj": "1.0.2"
+  },
+  "devDependencies": {
+    "d3": "^3.5.17",
+    "eslint": "^6.5.1",
+    "esm": "^3.2.25",
+    "package-json-versionify": "1.0.2",
+    "rollup": "1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "4",
+    "rollup-plugin-node-resolve": "5",
+    "rollup-plugin-terser": "5",
+    "semver": "^5.7.0",
+    "sinon": "^7.5.0",
+    "uglify-js": "^3.6.7",
+    "vows": "0.8.2"
+  },
+  "scripts": {
+    "benchmark": "node -r esm test/benchmark.js",
+    "build": "rollup -c rollup.config.js",
+    "clean": "rm -f crossfilter.js crossfilter.min.js",
+    "test": "node -r esm  ./node_modules/.bin/vows --verbose && eslint src/"
+  },
+  "files": [
+    "index.js",
+    "main.js",
+    "src/**",
+    "index.d.ts",
+    "crossfilter.js",
+    "crossfilter.min.js"
+  ],
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "globals": {
+      "Uint8Array": true,
+      "Uint16Array": true,
+      "Uint32Array": true
+    },
+    "extends": "eslint:recommended"
+  }
+}

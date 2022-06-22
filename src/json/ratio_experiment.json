@@ -1,0 +1,10 @@
+{
+  "replicates": ["ENCFF700UBO", "ENCFF083RXK"],
+  "controls": ["ENCFF380EDG", "ENCFF095MVW"],
+  "public_accession": "ENCSR168STG",
+  "Biosample": "parathyroid adenoma",
+  "Biosample_type": "tissue",
+  "Assay": "ChIP-seq",
+  "Genome": "hg38",
+  "Assay_type": "dna_binding"
+}

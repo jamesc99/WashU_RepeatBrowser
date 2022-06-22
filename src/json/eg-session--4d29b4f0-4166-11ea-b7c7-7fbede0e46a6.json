@@ -1,0 +1,93 @@
+{
+  "genomeName": "hg19",
+  "viewInterval": { "start": 0, "end": 139071 },
+  "tracks": [
+    {
+      "name": "gencodeV29",
+      "type": "geneannotation",
+      "label": "gencodeV29",
+      "options": { "maxRows": 10, "label": "gencodeV29" },
+      "url": "",
+      "metadata": { "Track type": "geneannotation" },
+      "isSelected": false,
+      "fileObj": "",
+      "files": [],
+      "tracks": [],
+      "isText": false,
+      "textConfig": {},
+      "genome": "hg19"
+    },
+    {
+      "name": "RepeatMasker",
+      "type": "repeatmasker",
+      "label": "RepeatMasker",
+      "options": { "label": "RepeatMasker" },
+      "url": "https://vizhub.wustl.edu/public/hg19/rmsk16.bb",
+      "metadata": { "Track type": "repeatmasker" },
+      "isSelected": false,
+      "fileObj": "",
+      "files": [],
+      "tracks": [],
+      "isText": false,
+      "textConfig": {}
+    },
+    {
+      "name": "Ruler",
+      "type": "ruler",
+      "label": "Ruler",
+      "options": { "label": "Ruler" },
+      "url": "",
+      "metadata": { "Track type": "ruler" },
+      "isSelected": false,
+      "fileObj": "",
+      "files": [],
+      "tracks": [],
+      "isText": false,
+      "textConfig": {}
+    }
+  ],
+  "metadataTerms": [],
+  "regionSets": [
+    {
+      "name": "test",
+      "features": [
+        {
+          "name": "CYP4A22",
+          "locus": { "start": 47603096, "end": 47614526, "chr": "chr1" },
+          "strand": "+"
+        },
+        {
+          "name": "chr10:96796528-96829254",
+          "locus": { "start": 96796528, "end": 96829254, "chr": "chr10" },
+          "strand": "+"
+        },
+        {
+          "name": "CYP2A6",
+          "locus": { "start": 41349442, "end": 41356352, "chr": "chr19" },
+          "strand": "-"
+        },
+        {
+          "name": "CYP3A4",
+          "locus": { "start": 99354582, "end": 99381811, "chr": "chr7" },
+          "strand": "-"
+        },
+        {
+          "name": "chr1:47223509-47276522",
+          "locus": { "start": 47223509, "end": 47276522, "chr": "chr1" },
+          "strand": "+"
+        },
+        {
+          "name": "CYP1A2",
+          "locus": { "start": 75041185, "end": 75048948, "chr": "chr15" },
+          "strand": "+"
+        }
+      ],
+      "genomeName": "hg19",
+      "flankingStrategy": { "type": 0, "upstream": 0, "downstream": 0 }
+    }
+  ],
+  "regionSetViewIndex": 0,
+  "trackLegendWidth": 120,
+  "bundleId": "4d29b4f0-4166-11ea-b7c7-7fbede0e46a6",
+  "isShowingNavigator": true
+}

@@ -1,0 +1,66 @@
+[{
+    "id": "2e22fd7d-ea74-42f1-b690-f3002a643280",
+    "public_accession": "ENCSR411UYA",
+    "assay": "ChIP-seq",
+    "sample": "K562",
+    "sample_type": "immortalized cell line",
+    "experiment_target": "MTA2",
+    "project": "ENCODE",
+    "genome": "hg38",
+    "data_type": "public",
+    "replicates": ["ENCFF693CFR", "ENCFF259AYK"],
+    "controls": ["ENCFF002EFF", "ENCFF002EFA"]
+},
+{
+    "id": "b3be8873-d941-4d93-bc01-c66804531473",
+    "public_accession": "ENCSR197ALX",
+    "assay": "ChIP-seq",
+    "sample": "K562",
+    "sample_type": "immortalized cell line",
+    "experiment_target": "HDGF",
+    "project": "ENCODE",
+    "genome": "hg38",
+    "data_type": "public",
+    "replicates": ["ENCFF513AFY"],
+    "controls": ["ENCFF002EFF"]
+},
+{
+    "id": "00c22620-a2d1-4eb6-a7f6-7d2c9d7f4f79",
+    "public_accession": "ENCSR360HRA",
+    "assay": "ChIP-seq",
+    "sample": "K562",
+    "sample_type": "immortalized cell line",
+    "experiment_target": "KDM1A",
+    "project": "ENCODE",
+    "genome": "hg38",
+    "data_type": "public",
+    "replicates": ["ENCFF672AOW"],
+    "controls": ["ENCFF837MIV"]
+},
+{
+    "id": "9ea55b82-1d92-4415-82b2-ac6c571e6ae7",
+    "public_accession": "ENCSR382AIB",
+    "assay": "ChIP-seq",
+    "sample": "K562",
+    "sample_type": "immortalized cell line",
+    "experiment_target": "eGFP-DDX20",
+    "project": "ENCODE",
+    "genome": "hg38",
+    "data_type": "public",
+    "replicates": ["ENCFF077SBC"],
+    "controls": ["ENCFF467ZVS"]
+},
+{
+    "id": "55812310-f0a0-4b7d-bd00-ec79a668bfd8",
+    "public_accession": "ENCSR835TCD",
+    "assay": "ChIP-seq",
+    "sample": "K562",
+    "sample_type": "immortalized cell line",
+    "experiment_target": "eGFP-HDAC8",
+    "project": "ENCODE",
+    "genome": "hg38",
+    "data_type": "public",
+    "replicates": ["ENCFF393ANW"],
+    "controls": ["ENCFF047NSE"]
+}
+]

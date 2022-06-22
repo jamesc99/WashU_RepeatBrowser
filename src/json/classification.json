@@ -1,0 +1,5140 @@
+{
+  "classes": {
+    "Satellite": 21,
+    "rRNA": 3,
+    "RNA": 1,
+    "srpRNA": 1,
+    "SINE": 59,
+    "DNA": 236,
+    "scRNA": 5,
+    "LINE": 171,
+    "SINE?": 2,
+    "LTR": 578,
+    "DNA?": 28,
+    "Unknown": 71,
+    "RC": 3,
+    "RC?": 1,
+    "LTR?": 4,
+    "Retroposon": 6,
+    "snRNA": 12,
+    "tRNA": 62
+  },
+  "families": {
+    "Satellite": 12,
+    "rRNA": 3,
+    "RNA": 1,
+    "srpRNA": 1,
+    "acro": 1,
+    "centr": 6,
+    "Alu": 50,
+    "5S-Deu-L2": 1,
+    "tRNA-Deu": 1,
+    "hAT-Tip100": 31,
+    "scRNA": 5,
+    "hAT-Blackjack": 8,
+    "CR1": 22,
+    "tRNA": 64,
+    "hAT-Charlie": 75,
+    "PIF-Harbinger": 2,
+    "TcMar": 1,
+    "ERV1": 298,
+    "ERVL": 121,
+    "DNA": 14,
+    "DNA?": 28,
+    "Unknown": 71,
+    "TcMar?": 2,
+    "L1": 132,
+    "ERVK": 42,
+    "TcMar-Mariner": 5,
+    "Helitron": 3,
+    "Helitron?": 1,
+    "TcMar-Tc2": 8,
+    "L2": 10,
+    "RTE-X": 4,
+    "ERV1?": 2,
+    "Gypsy": 17,
+    "LTR": 5,
+    "ERVL?": 3,
+    "Gypsy?": 6,
+    "PiggyBac": 5,
+    "hAT?": 7,
+    "TcMar-Tigger": 62,
+    "LTR?": 4,
+    "TcMar-Pogo": 1,
+    "hAT": 3,
+    "MIR": 5,
+    "ERVL-MaLR": 84,
+    "RTE-BovB": 1,
+    "hAT-Tip100?": 3,
+    "tRNA-RTE": 1,
+    "Dong-R4": 1,
+    "Merlin": 1,
+    "hAT-Ac": 1,
+    "Penelope": 1,
+    "telo": 2,
+    "MULE-MuDR": 5,
+    "SVA": 6,
+    "snRNA": 12,
+    "hAT-Tag1": 1,
+    "PiggyBac?": 1,
+    "SINE?": 1
+  },
+  "subfamilies": {
+    "(CATTC)n": {
+      "type": "Satellite",
+      "family": "Satellite"
+    },
+    "5S": {
+      "type": "rRNA",
+      "family": "rRNA"
+    },
+    "7SK": {
+      "type": "RNA",
+      "family": "RNA"
+    },
+    "7SLRNA": {
+      "type": "srpRNA",
+      "family": "srpRNA"
+    },
+    "ACRO1": {
+      "type": "Satellite",
+      "family": "acro"
+    },
+    "ALR/Alpha": {
+      "type": "Satellite",
+      "family": "centr"
+    },
+    "AluJb": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluJo": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluJr": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluJr4": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSc": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSc5": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSc8": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSg": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSg4": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSg7": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSp": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSq": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSq10": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSq2": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSq4": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSx": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSx1": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSx3": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSx4": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSz": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluSz6": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluY": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYa5": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYa8": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYb8": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYb9": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYc": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYc3": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYd8": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYe5": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYe6": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYf1": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYg6": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYh3": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYh3a3": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYh7": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYh9": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYi6": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYi6_4d": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYj4": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYk11": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYk12": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYk2": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYk3": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYk4": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AluYm1": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "AmnSINE1": {
+      "type": "SINE",
+      "family": "5S-Deu-L2"
+    },
+    "AmnSINE2": {
+      "type": "SINE",
+      "family": "tRNA-Deu"
+    },
+    "Arthur1": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "Arthur1A": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "Arthur1B": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "Arthur1C": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "BC200": {
+      "type": "scRNA",
+      "family": "scRNA"
+    },
+    "BLACKJACK": {
+      "type": "DNA",
+      "family": "hAT-Blackjack"
+    },
+    "BSR/Beta": {
+      "type": "Satellite",
+      "family": "Satellite"
+    },
+    "CER": {
+      "type": "Satellite",
+      "family": "Satellite"
+    },
+    "CR1-11_Crp": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "CR1-12_AMi": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "CR1-13_AMi": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "CR1-16_AMi": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "CR1-3_Croc": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "CR1-8_Crp": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "CR1-L3A_Croc": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "CR1-L3B_Croc": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "CR1_Mam": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "CRP1": {
+      "type": "SINE?",
+      "family": "tRNA"
+    },
+    "Chap1_Mam": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie1": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie10": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie10a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie10b": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie11": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie12": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie13a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie13b": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie14a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie15a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie15b": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie16a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie17": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie17a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie17b": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie18a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie19a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie1a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie1b": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie20a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie21a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie22a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie23a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie24": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie25": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie26a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie29a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie2a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie2b": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie3": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie30a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie4": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie4a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie4z": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie5": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie6": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie7": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie7a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie8": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Charlie9": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Cheshire": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "Chompy-6_Croc": {
+      "type": "DNA",
+      "family": "PIF-Harbinger"
+    },
+    "Chompy-7_Croc": {
+      "type": "DNA",
+      "family": "PIF-Harbinger"
+    },
+    "D20S16": {
+      "type": "Satellite",
+      "family": "Satellite"
+    },
+    "DNA1_Mam": {
+      "type": "DNA",
+      "family": "TcMar"
+    },
+    "ERV24B_Prim-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "ERV24_Prim-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "ERV3-16A3_I-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "ERV3-16A3_LTR": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "ERVL-B4-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "ERVL-E-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "ERVL-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "ERVL47-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "Eulor1": {
+      "type": "DNA",
+      "family": "DNA"
+    },
+    "Eulor10": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "Eulor11": {
+      "type": "DNA",
+      "family": "DNA"
+    },
+    "Eulor12": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "Eulor2A": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "Eulor2B": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "Eulor2C": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "Eulor3": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "Eulor4": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "Eulor5A": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "Eulor5B": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "Eulor6A": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "Eulor6B": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "Eulor6C": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "Eulor6D": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "Eulor6E": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "Eulor7": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "Eulor8": {
+      "type": "DNA",
+      "family": "TcMar?"
+    },
+    "Eulor9A": {
+      "type": "DNA",
+      "family": "DNA"
+    },
+    "Eulor9B": {
+      "type": "DNA",
+      "family": "DNA"
+    },
+    "Eulor9C": {
+      "type": "DNA",
+      "family": "DNA"
+    },
+    "FAM": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "FLAM_A": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "FLAM_C": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "FRAM": {
+      "type": "SINE",
+      "family": "Alu"
+    },
+    "FordPrefect": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "FordPrefect_a": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "GSAT": {
+      "type": "Satellite",
+      "family": "centr"
+    },
+    "GSATII": {
+      "type": "Satellite",
+      "family": "centr"
+    },
+    "GSATX": {
+      "type": "Satellite",
+      "family": "centr"
+    },
+    "HAL1": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "HAL1M8": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "HAL1ME": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "HAL1b": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "HERV-Fc1-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV-Fc1_LTR1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV-Fc1_LTR2": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV-Fc1_LTR3": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV-Fc2-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV-Fc2_LTR": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV15-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV16-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "HERV17-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV1_I-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV1_LTRa": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV1_LTRb": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV1_LTRc": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV1_LTRd": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV1_LTRe": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV3-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV30-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV35I-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV4_I-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV9-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV9N-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERV9NC-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERVE-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERVE_a-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERVFH19-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERVFH21-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERVH-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERVH48-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERVI-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERVIP10B3-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERVIP10F-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERVIP10FH-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERVK-int": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "HERVK11-int": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "HERVK11D-int": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "HERVK13-int": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "HERVK14-int": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "HERVK14C-int": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "HERVK22-int": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "HERVK3-int": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "HERVK9-int": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "HERVKC4-int": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "HERVL-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "HERVL18-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "HERVL32-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "HERVL40-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "HERVL66-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "HERVL74-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "HERVP71A-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HERVS71-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HSAT4": {
+      "type": "Satellite",
+      "family": "centr"
+    },
+    "HSAT5": {
+      "type": "Satellite",
+      "family": "Satellite"
+    },
+    "HSAT6": {
+      "type": "Satellite",
+      "family": "Satellite"
+    },
+    "HSATI": {
+      "type": "Satellite",
+      "family": "Satellite"
+    },
+    "HSMAR1": {
+      "type": "DNA",
+      "family": "TcMar-Mariner"
+    },
+    "HSMAR2": {
+      "type": "DNA",
+      "family": "TcMar-Mariner"
+    },
+    "HUERS-P1-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HUERS-P2-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HUERS-P3-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HUERS-P3b-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "HY1": {
+      "type": "scRNA",
+      "family": "scRNA"
+    },
+    "HY3": {
+      "type": "scRNA",
+      "family": "scRNA"
+    },
+    "HY4": {
+      "type": "scRNA",
+      "family": "scRNA"
+    },
+    "HY5": {
+      "type": "scRNA",
+      "family": "scRNA"
+    },
+    "Harlequin-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "Helitron1Na_Mam": {
+      "type": "RC",
+      "family": "Helitron"
+    },
+    "Helitron1Nb_Mam": {
+      "type": "RC",
+      "family": "Helitron"
+    },
+    "Helitron2Na_Mam": {
+      "type": "RC?",
+      "family": "Helitron?"
+    },
+    "Helitron3Na_Mam": {
+      "type": "RC",
+      "family": "Helitron"
+    },
+    "Kanga1": {
+      "type": "DNA",
+      "family": "TcMar-Tc2"
+    },
+    "Kanga11a": {
+      "type": "DNA",
+      "family": "TcMar-Tc2"
+    },
+    "Kanga1a": {
+      "type": "DNA",
+      "family": "TcMar-Tc2"
+    },
+    "Kanga1b": {
+      "type": "DNA",
+      "family": "TcMar-Tc2"
+    },
+    "Kanga1c": {
+      "type": "DNA",
+      "family": "TcMar-Tc2"
+    },
+    "Kanga1d": {
+      "type": "DNA",
+      "family": "TcMar-Tc2"
+    },
+    "Kanga2_a": {
+      "type": "DNA",
+      "family": "TcMar-Tc2"
+    },
+    "L1HS": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M1": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M2": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M2a": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M2a1": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M2b": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M2c": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M3": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M3a": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M3b": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M3c": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M3d": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M3de": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M3e": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M3f": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M4": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M4a1": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M4a2": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M4b": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M4c": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M5": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M6": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M6B": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M7": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1M8": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MA1": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MA10": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MA2": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MA3": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MA4": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MA4A": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MA5": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MA5A": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MA6": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MA7": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MA8": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MA9": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MB1": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MB2": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MB3": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MB4": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MB5": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MB7": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MB8": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MC": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MC1": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MC2": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MC3": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MC4": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MC4a": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MC5": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MC5a": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MCa": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MCb": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MCc": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MD": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MD1": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MD2": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MD3": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MDa": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MDb": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME1": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME2": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME2z": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME3": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME3A": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME3B": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME3C": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME3Cz": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME3D": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME3E": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME3F": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME3G": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME4a": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME4b": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME4c": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1ME5": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MEa": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MEb": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MEc": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MEd": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MEf": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MEg": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MEg1": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MEg2": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MEh": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MEi": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1MEj": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1P": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1P1": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1P2": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1P3": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1P3b": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1P4": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1P4a": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1P4b": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1P4c": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1P4d": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1P4e": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1P5": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA10": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA11": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA12": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA13": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA14": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA15": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA15-16": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA16": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA17": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA2": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA3": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA4": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA5": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA6": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA7": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA8": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PA8A": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PB": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PB1": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PB2": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PB3": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PB4": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PBa": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PBa1": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PBb": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L1PREC2": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "L2": {
+      "type": "LINE",
+      "family": "L2"
+    },
+    "L2-1_AMi": {
+      "type": "LINE",
+      "family": "L2"
+    },
+    "L2-1_Crp": {
+      "type": "LINE",
+      "family": "L2"
+    },
+    "L2-3_AMi": {
+      "type": "LINE",
+      "family": "L2"
+    },
+    "L2-3_Crp": {
+      "type": "LINE",
+      "family": "L2"
+    },
+    "L2a": {
+      "type": "LINE",
+      "family": "L2"
+    },
+    "L2b": {
+      "type": "LINE",
+      "family": "L2"
+    },
+    "L2c": {
+      "type": "LINE",
+      "family": "L2"
+    },
+    "L3": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "L3b": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "L4_A_Mam": {
+      "type": "LINE",
+      "family": "RTE-X"
+    },
+    "L4_B_Mam": {
+      "type": "LINE",
+      "family": "RTE-X"
+    },
+    "L4_C_Mam": {
+      "type": "LINE",
+      "family": "RTE-X"
+    },
+    "L5": {
+      "type": "LINE",
+      "family": "RTE-X"
+    },
+    "LFSINE_Vert": {
+      "type": "SINE",
+      "family": "tRNA"
+    },
+    "LOR1-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LOR1a": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LOR1b": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LSAU": {
+      "type": "Satellite",
+      "family": "Satellite"
+    },
+    "LSU-rRNA_Hsa": {
+      "type": "rRNA",
+      "family": "rRNA"
+    },
+    "LTR06": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR101_Mam": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR102_Mam": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR103_Mam": {
+      "type": "LTR",
+      "family": "ERV1?"
+    },
+    "LTR103b_Mam": {
+      "type": "LTR",
+      "family": "ERV1?"
+    },
+    "LTR104_Mam": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "LTR105_Mam": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR106_Mam": {
+      "type": "LTR",
+      "family": "LTR"
+    },
+    "LTR107_Mam": {
+      "type": "LTR",
+      "family": "LTR"
+    },
+    "LTR108a_Mam": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR108b_Mam": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR108c_Mam": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR108d_Mam": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR108e_Mam": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR109A2": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR10A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR10B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR10B1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR10B2": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR10C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR10D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR10E": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR10F": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR10G": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR12": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR12B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR12C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR12D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR12E": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR12F": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR12_": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR13": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR13A": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR13_": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR14": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR14A": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR14B": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR14C": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR15": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR16": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR16A": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR16A1": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR16A2": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR16B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR16B1": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR16B2": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR16C": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR16D": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR16D1": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR16D2": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR16E1": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR16E2": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR17": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR18A": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR18B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR18C": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR19-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR19A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR19B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR19C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR1A1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR1A2": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR1B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR1B0": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR1B1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR1C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR1C1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR1C3": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR1D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR1D1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR1E": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR1F": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR1F1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR1F2": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR2": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR21A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR21B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR21C": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR22": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR22A": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR22B": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR22B1": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR22B2": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR22C": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR22C0": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR22C2": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR22E": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR23": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR23-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR24": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR24B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR24C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR25": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR25-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR26": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR26B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR26C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR26D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR26E": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR27": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR2752": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR27B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR27C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR27D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR27E": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR28": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR28B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR28C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR29": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR2B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR2C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR3": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR30": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR31": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR32": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR33": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR33A": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR33A_": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR33B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR33C": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR34": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR35": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR35A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR35B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR36": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR37-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR37A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR37B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR38": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR38-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR38A1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR38B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR38C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR39": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR39-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR3A": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR3B": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR3B_": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR4": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR40A1": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR40a": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR40b": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR40c": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR41": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR41B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR41C": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR42": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR43": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR43-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR43B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR44": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR45": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR45B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR45C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR46": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR46-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR47A": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR47A2": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR47B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR47B2": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR47B3": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR47B4": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR48": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR48B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR49": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR49-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR5": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR50": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR51": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR52": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR52-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR53": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR53-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR53B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR54": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR54B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR55": {
+      "type": "LTR",
+      "family": "ERVL?"
+    },
+    "LTR56": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR57": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR57-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR58": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR59": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR5A": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR5B": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR5_Hs": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "LTR60": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR60B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR61": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR62": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR64": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR65": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR66": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR67B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR68": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR69": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR6A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR6B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR7": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR70": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR71A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR71B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR72": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR72B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR73": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR75": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR75B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR75_1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR76": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR77": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR78": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR78B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR79": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR7A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR7B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR7C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR7Y": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR8": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR80A": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR80B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR81": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "LTR81A": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "LTR81AB": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "LTR81B": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "LTR81C": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "LTR82A": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR82B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR83": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR84a": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR84b": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR85a": {
+      "type": "LTR",
+      "family": "Gypsy?"
+    },
+    "LTR85b": {
+      "type": "LTR",
+      "family": "Gypsy?"
+    },
+    "LTR85c": {
+      "type": "LTR",
+      "family": "Gypsy?"
+    },
+    "LTR86A1": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR86A2": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR86B1": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR86B2": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR86C": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR87": {
+      "type": "LTR",
+      "family": "ERVL?"
+    },
+    "LTR88a": {
+      "type": "LTR",
+      "family": "Gypsy?"
+    },
+    "LTR88b": {
+      "type": "LTR",
+      "family": "Gypsy?"
+    },
+    "LTR88c": {
+      "type": "LTR",
+      "family": "Gypsy?"
+    },
+    "LTR89": {
+      "type": "LTR",
+      "family": "ERVL?"
+    },
+    "LTR8A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR8B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR9": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR90A": {
+      "type": "LTR",
+      "family": "LTR"
+    },
+    "LTR90B": {
+      "type": "LTR",
+      "family": "LTR"
+    },
+    "LTR91": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "LTR9A1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR9B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR9C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "LTR9D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "Looper": {
+      "type": "DNA",
+      "family": "PiggyBac"
+    },
+    "MADE1": {
+      "type": "DNA",
+      "family": "TcMar-Mariner"
+    },
+    "MADE2": {
+      "type": "DNA",
+      "family": "TcMar-Mariner"
+    },
+    "MARNA": {
+      "type": "DNA",
+      "family": "TcMar-Mariner"
+    },
+    "MER101": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER101-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER101B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER102a": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER102b": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER102c": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER103C": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER104": {
+      "type": "DNA",
+      "family": "TcMar-Tc2"
+    },
+    "MER105": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER106A": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER106B": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER107": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER110": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER110-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER110A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER112": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER113": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER113A": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER113B": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER115": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MER117": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER119": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER11A": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "MER11B": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "MER11C": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "MER11D": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "MER121": {
+      "type": "DNA",
+      "family": "hAT?"
+    },
+    "MER121B": {
+      "type": "DNA",
+      "family": "hAT?"
+    },
+    "MER123": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "MER124": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "MER125": {
+      "type": "DNA",
+      "family": "DNA"
+    },
+    "MER126": {
+      "type": "DNA",
+      "family": "DNA"
+    },
+    "MER127": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER129": {
+      "type": "LTR?",
+      "family": "LTR?"
+    },
+    "MER130": {
+      "type": "DNA",
+      "family": "DNA"
+    },
+    "MER131": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "MER132": {
+      "type": "DNA",
+      "family": "TcMar-Pogo"
+    },
+    "MER133A": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "MER133B": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "MER134": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "MER135": {
+      "type": "DNA",
+      "family": "DNA"
+    },
+    "MER136": {
+      "type": "DNA",
+      "family": "DNA"
+    },
+    "MER1A": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER1B": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER2": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER20": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER20B": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER21-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER21A": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER21B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER21C": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER2B": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER3": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER30": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER30B": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER31-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER31A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER31B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER33": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER34": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER34-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER34A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER34A1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER34B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER34B-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER34C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER34C2": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER34C_": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER34D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER39": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER39B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER4-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER41-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER41A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER41B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER41C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER41D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER41E": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER41G": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER44A": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER44B": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER44C": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER44D": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER45A": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MER45B": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MER45C": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MER45R": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MER46C": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER47A": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER47B": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER47C": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER48": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER49": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER4A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER4A1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER4A1_": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER4B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER4B-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER4C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER4CL34": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER4D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER4D0": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER4D1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER4E": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER4E1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER50": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER50-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER50B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER50C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER51-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER51A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER51B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER51C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER51D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER51E": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER52-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER52A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER52C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER52D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER53": {
+      "type": "DNA",
+      "family": "hAT"
+    },
+    "MER54A": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER54B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER57-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER57A-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER57A1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER57B1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER57B2": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER57C1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER57C2": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER57D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER57E1": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER57E2": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER57E3": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER57F": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER58A": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER58B": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER58C": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER58D": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER5A": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER5A1": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER5B": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER5C": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER5C1": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "MER6": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER61-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER61A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER61B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER61C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER61D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER61E": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER61F": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER63A": {
+      "type": "DNA",
+      "family": "hAT-Blackjack"
+    },
+    "MER63B": {
+      "type": "DNA",
+      "family": "hAT-Blackjack"
+    },
+    "MER63C": {
+      "type": "DNA",
+      "family": "hAT-Blackjack"
+    },
+    "MER63D": {
+      "type": "DNA",
+      "family": "hAT-Blackjack"
+    },
+    "MER65-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER65A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER65B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER65C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER65D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER66-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER66A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER66B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER66C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER66D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER67A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER67B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER67C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER67D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER68": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER68-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER68B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER68C": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER6A": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER6B": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER6C": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER70-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER70A": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER70B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER70C": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER72": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER72B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER73": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER74A": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER74B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER74C": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER75": {
+      "type": "DNA",
+      "family": "PiggyBac"
+    },
+    "MER75A": {
+      "type": "DNA",
+      "family": "PiggyBac"
+    },
+    "MER75B": {
+      "type": "DNA",
+      "family": "PiggyBac"
+    },
+    "MER76": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER76-int": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER77": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER77B": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER8": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MER81": {
+      "type": "DNA",
+      "family": "hAT-Blackjack"
+    },
+    "MER83": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER83A-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER83B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER83B-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER83C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER84": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER84-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER85": {
+      "type": "DNA",
+      "family": "PiggyBac"
+    },
+    "MER87": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER87B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER88": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MER89": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER89-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER90": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER90a": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER91A": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MER91B": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MER91C": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MER92-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER92A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER92B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER92C": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER92D": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER94": {
+      "type": "DNA",
+      "family": "hAT-Blackjack"
+    },
+    "MER94B": {
+      "type": "DNA",
+      "family": "hAT-Blackjack"
+    },
+    "MER95": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "MER96": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MER96B": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MER97a": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MER97b": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MER97c": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MER97d": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MER99": {
+      "type": "DNA",
+      "family": "hAT?"
+    },
+    "MER9B": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "MER9a1": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "MER9a2": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "MER9a3": {
+      "type": "LTR",
+      "family": "ERVK"
+    },
+    "MERX": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MIR": {
+      "type": "SINE",
+      "family": "MIR"
+    },
+    "MIR1_Amn": {
+      "type": "SINE",
+      "family": "MIR"
+    },
+    "MIR3": {
+      "type": "SINE",
+      "family": "MIR"
+    },
+    "MIRb": {
+      "type": "SINE",
+      "family": "MIR"
+    },
+    "MIRc": {
+      "type": "SINE",
+      "family": "MIR"
+    },
+    "MLT-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1A": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1A-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1A0": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1A0-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1A1": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1A1-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1B": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1B-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1C": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1C-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1D": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1D-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1E": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1E-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1E1": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1E1-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1E1A": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1E1A-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1E2": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1E2-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1E3": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1E3-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1F": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1F-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1F1": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1F1-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1F2": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1F2-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1G": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1G-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1G1": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1G1-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1G3": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1G3-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1H": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1H-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1H1": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1H1-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1H2": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1H2-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1I": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1I-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1J": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1J-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1J1": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1J1-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1J2": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1J2-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1K": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1K-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1L": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1L-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1M": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1M-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1N2": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1N2-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1O": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT1O-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MLT2A1": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MLT2A2": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MLT2B1": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MLT2B2": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MLT2B3": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MLT2B4": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MLT2B5": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MLT2C1": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MLT2C2": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MLT2D": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MLT2E": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MLT2F": {
+      "type": "LTR",
+      "family": "ERVL"
+    },
+    "MSR1": {
+      "type": "Satellite",
+      "family": "Satellite"
+    },
+    "MST-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MSTA": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MSTA-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MSTA1": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MSTA1-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MSTB": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MSTB-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MSTB1": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MSTB1-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MSTB2": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MSTB2-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MSTC": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MSTC-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MSTD": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MSTD-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "MamGyp-int": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "MamGypLTR1a": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "MamGypLTR1b": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "MamGypLTR1c": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "MamGypLTR1d": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "MamGypLTR2b": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "MamGypLTR2c": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "MamGypLTR3": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "MamGypLTR3a": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "MamGypsy2-I": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "MamGypsy2-LTR": {
+      "type": "LTR",
+      "family": "Gypsy"
+    },
+    "MamRTE1": {
+      "type": "LINE",
+      "family": "RTE-BovB"
+    },
+    "MamRep1151": {
+      "type": "LTR?",
+      "family": "LTR?"
+    },
+    "MamRep137": {
+      "type": "DNA",
+      "family": "TcMar?"
+    },
+    "MamRep1527": {
+      "type": "LTR",
+      "family": "LTR"
+    },
+    "MamRep1879": {
+      "type": "DNA",
+      "family": "hAT-Tip100?"
+    },
+    "MamRep1894": {
+      "type": "DNA",
+      "family": "hAT"
+    },
+    "MamRep38": {
+      "type": "DNA",
+      "family": "hAT"
+    },
+    "MamRep4096": {
+      "type": "DNA",
+      "family": "hAT?"
+    },
+    "MamRep434": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "MamRep488": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MamRep564": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "MamRep605": {
+      "type": "LTR?",
+      "family": "LTR?"
+    },
+    "MamSINE1": {
+      "type": "SINE",
+      "family": "tRNA-RTE"
+    },
+    "MamTip1": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MamTip2": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "MamTip3": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "Mam_R4": {
+      "type": "LINE",
+      "family": "Dong-R4"
+    },
+    "Merlin1_HS": {
+      "type": "DNA",
+      "family": "Merlin"
+    },
+    "ORSL": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "ORSL-2a": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "ORSL-2b": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "OldhAT1": {
+      "type": "DNA",
+      "family": "hAT-Ac"
+    },
+    "PABL_A": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "PABL_A-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "PABL_B": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "PABL_B-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "PRIMA4-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "PRIMA41-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "PRIMA4_LTR": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "PRIMAX-int": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "Penelope1_Vert": {
+      "type": "LINE",
+      "family": "Penelope"
+    },
+    "Plat_L3": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "PrimLTR79": {
+      "type": "LTR",
+      "family": "ERV1"
+    },
+    "REP522": {
+      "type": "Satellite",
+      "family": "telo"
+    },
+    "Ricksha": {
+      "type": "DNA",
+      "family": "MULE-MuDR"
+    },
+    "Ricksha_0": {
+      "type": "DNA",
+      "family": "MULE-MuDR"
+    },
+    "Ricksha_a": {
+      "type": "DNA",
+      "family": "MULE-MuDR"
+    },
+    "Ricksha_b": {
+      "type": "DNA",
+      "family": "MULE-MuDR"
+    },
+    "Ricksha_c": {
+      "type": "DNA",
+      "family": "MULE-MuDR"
+    },
+    "SAR": {
+      "type": "Satellite",
+      "family": "Satellite"
+    },
+    "SATR1": {
+      "type": "Satellite",
+      "family": "Satellite"
+    },
+    "SATR2": {
+      "type": "Satellite",
+      "family": "Satellite"
+    },
+    "SST1": {
+      "type": "Satellite",
+      "family": "centr"
+    },
+    "SSU-rRNA_Hsa": {
+      "type": "rRNA",
+      "family": "rRNA"
+    },
+    "SVA_A": {
+      "type": "Retroposon",
+      "family": "SVA"
+    },
+    "SVA_B": {
+      "type": "Retroposon",
+      "family": "SVA"
+    },
+    "SVA_C": {
+      "type": "Retroposon",
+      "family": "SVA"
+    },
+    "SVA_D": {
+      "type": "Retroposon",
+      "family": "SVA"
+    },
+    "SVA_E": {
+      "type": "Retroposon",
+      "family": "SVA"
+    },
+    "SVA_F": {
+      "type": "Retroposon",
+      "family": "SVA"
+    },
+    "TAR1": {
+      "type": "Satellite",
+      "family": "telo"
+    },
+    "THE1-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "THE1A": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "THE1A-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "THE1B": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "THE1B-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "THE1C": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "THE1C-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "THE1D": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "THE1D-int": {
+      "type": "LTR",
+      "family": "ERVL-MaLR"
+    },
+    "Tigger1": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger10": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger11a": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger12": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger12A": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger12c": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger13a": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger14a": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger15a": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger16a": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger16b": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger17": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger17a": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger17b": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger17c": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger18a": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger19a": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger19b": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger1a_Art": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger1a_Mars": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger2": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger20a": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger2a": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger2b_Pri": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger3": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger3a": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger3b": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger3c": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger3d": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger4": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger4a": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger4b": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger5": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger5b": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger6a": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger6b": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger7": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger8": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger9a": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "Tigger9b": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "U1": {
+      "type": "snRNA",
+      "family": "snRNA"
+    },
+    "U13": {
+      "type": "snRNA",
+      "family": "snRNA"
+    },
+    "U13_": {
+      "type": "snRNA",
+      "family": "snRNA"
+    },
+    "U14": {
+      "type": "snRNA",
+      "family": "snRNA"
+    },
+    "U17": {
+      "type": "snRNA",
+      "family": "snRNA"
+    },
+    "U2": {
+      "type": "snRNA",
+      "family": "snRNA"
+    },
+    "U3": {
+      "type": "snRNA",
+      "family": "snRNA"
+    },
+    "U4": {
+      "type": "snRNA",
+      "family": "snRNA"
+    },
+    "U5": {
+      "type": "snRNA",
+      "family": "snRNA"
+    },
+    "U6": {
+      "type": "snRNA",
+      "family": "snRNA"
+    },
+    "U7": {
+      "type": "snRNA",
+      "family": "snRNA"
+    },
+    "U8": {
+      "type": "snRNA",
+      "family": "snRNA"
+    },
+    "UCON1": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON100": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "UCON101": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON103": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON105": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON107": {
+      "type": "DNA",
+      "family": "hAT-Tag1"
+    },
+    "UCON11": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "UCON12": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON12A": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON132b": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "UCON14": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "UCON15": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON16": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON17": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON18": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON19": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON2": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "UCON20": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON21": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "UCON22": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON23": {
+      "type": "DNA",
+      "family": "hAT-Tip100?"
+    },
+    "UCON24": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON25": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON26": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON27": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON28a": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON28b": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON28c": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON29": {
+      "type": "DNA",
+      "family": "PiggyBac?"
+    },
+    "UCON31": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON33": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "UCON34": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON35": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON37": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON38": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON39": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "UCON4": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON40": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON41": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON43": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON44": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON46": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON47": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON48": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON49": {
+      "type": "LINE",
+      "family": "L2"
+    },
+    "UCON5": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON50": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON51": {
+      "type": "LTR?",
+      "family": "LTR?"
+    },
+    "UCON53": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON54": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON55": {
+      "type": "DNA",
+      "family": "TcMar-Tigger"
+    },
+    "UCON56": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON57": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON58": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON59": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON6": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON60": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON61": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON62": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "UCON63": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON64": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON65": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON66": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON67": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON68": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON69": {
+      "type": "DNA",
+      "family": "hAT?"
+    },
+    "UCON7": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "UCON70": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON71": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON71_Crp": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON72": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON73": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON74": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "UCON75": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON76": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON77": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON78": {
+      "type": "DNA",
+      "family": "DNA"
+    },
+    "UCON79": {
+      "type": "DNA?",
+      "family": "DNA?"
+    },
+    "UCON8": {
+      "type": "DNA",
+      "family": "DNA"
+    },
+    "UCON80": {
+      "type": "DNA",
+      "family": "hAT?"
+    },
+    "UCON80_AMi": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON81": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "UCON82": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON83": {
+      "type": "SINE?",
+      "family": "SINE?"
+    },
+    "UCON84": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON85": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON86": {
+      "type": "LINE",
+      "family": "L2"
+    },
+    "UCON87": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON88": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON89": {
+      "type": "DNA",
+      "family": "hAT?"
+    },
+    "UCON9": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON92": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON93": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON94": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON96": {
+      "type": "Unknown",
+      "family": "Unknown"
+    },
+    "UCON97": {
+      "type": "DNA",
+      "family": "DNA"
+    },
+    "UCON99": {
+      "type": "DNA",
+      "family": "DNA"
+    },
+    "X1_LINE": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "X2_LINE": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "X5B_LINE": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "X6A_LINE": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "X6B_LINE": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "X7A_LINE": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "X7B_LINE": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "X7C_LINE": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "X7D_LINE": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "X8_LINE": {
+      "type": "LINE",
+      "family": "CR1"
+    },
+    "X9_LINE": {
+      "type": "LINE",
+      "family": "L1"
+    },
+    "Zaphod": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "Zaphod2": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "Zaphod3": {
+      "type": "DNA",
+      "family": "hAT-Tip100"
+    },
+    "hAT-16_Crp": {
+      "type": "DNA",
+      "family": "hAT-Charlie"
+    },
+    "hAT-N1_Mam": {
+      "type": "DNA",
+      "family": "hAT-Tip100?"
+    },
+    "tRNA-Ala-GCA": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Ala-GCG": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Ala-GCY": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Ala-GCY_": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Arg-AGA": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Arg-AGG": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Arg-CGA": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Arg-CGA_": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Arg-CGG": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Arg-CGY_": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Asn-AAC": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Asn-AAT": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Asp-GAY": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Cys-TGY": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Gln-CAA": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Gln-CAA_": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Gln-CAG": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Glu-GAA": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Glu-GAG": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Glu-GAG_": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Gly-GGA": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Gly-GGG": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Gly-GGY": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-His-CAY": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-His-CAY_": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Ile-ATA": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Ile-ATC": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Ile-ATT": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Leu-CTA": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Leu-CTA_": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Leu-CTG": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Leu-CTY": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Leu-TTA": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Leu-TTA(m)": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Leu-TTG": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Lys-AAA": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Lys-AAG": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Met": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Met-i": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Met_": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Phe-TTY": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Pro-CCA": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Pro-CCG": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Pro-CCY": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-SeC(e)-TGA": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Ser-AGY": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Ser-TCA": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Ser-TCA(m)": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Ser-TCA_": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Ser-TCG": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Ser-TCY": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Thr-ACA": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Thr-ACG": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Thr-ACG_": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Thr-ACY": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Thr-ACY_": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Trp-TGG": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Tyr-TAC": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Tyr-TAT": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Val-GTA": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Val-GTG": {
+      "type": "tRNA",
+      "family": "tRNA"
+    },
+    "tRNA-Val-GTY": {
+      "type": "tRNA",
+      "family": "tRNA"
+    }
+  }
+}

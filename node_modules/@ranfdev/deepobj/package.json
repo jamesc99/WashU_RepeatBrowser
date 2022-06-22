@@ -1,0 +1,21 @@
+{
+  "name": "@ranfdev/deepobj",
+  "version": "1.0.2",
+  "description":
+    "get, set, delete deep objects in javascript. Get the last object reference",
+  "module": "dist/deepobj.m.js",
+  "main": "dist/deepobj.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "npm run build && node ./index.test.js",
+    "build": "microbundle index.js -o dist"
+  },
+  "author": "ranfdev",
+  "license": "MIT",
+  "devDependencies": {
+    "microbundle": "^0.4.4",
+    "unexpected": "^10.37.2"
+  }
+}

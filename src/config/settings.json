@@ -1,0 +1,5 @@
+{
+    "WEB_ASSETS_URL": "https://target.wustl.edu/rb",
+    "WEB_ASSETS_URL_AWS": "https://s3.amazonaws.com/repbr",
+    "CLUSTER_API_URL": "https://18e11a19.ngrok.io/data/cluster"
+}

@@ -1,0 +1,63 @@
+<svg viewBox="0 0 462 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Encote Repeat Browser</title>
+    <defs>
+        <filter x="-4.3%" y="-12.7%" width="108.1%" height="132.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(24.000000, 19.000000)" fill="#5E5D5E" font-family="Phosphate-Inline, Phosphate" font-size="24" font-weight="normal" letter-spacing="5.53999996">
+            <text id="enco">
+                <tspan x="0.0366972477" y="23">enco</tspan>
+            </text>
+        </g>
+        <g id="Group-2" transform="translate(105.000000, 19.000000)" fill="#761CC5" font-family="Phosphate-Inline, Phosphate" font-size="24" font-weight="normal" letter-spacing="5.53999996">
+            <text id="te">
+                <tspan x="0" y="23">te</tspan>
+            </text>
+        </g>
+        <g id="Free-37-41-business-finance-law-justice-judge-auction" filter="url(#filter-1)" transform="translate(13.000000, 6.000000)">
+            <g id="Free-36-40-business-finance-oil-barrel" opacity="0.941972373" transform="translate(132.000000, 6.000000)">
+                <path d="M-2.80579664e-23,16.8888889 L5.30284668,16.8888889 C9.88211917,16.8888889 13.4961084,13.6257378 15.9458057,11.2449653 C18.5815222,8.6834073 19.8847359,8.1280935 21.2199268,7.87564019 C22.6137927,7.61209281 24.0314712,7.72420706 26.5,8.44444444 C31.3331445,9.85460069 33.3866357,6.43146701 37.2167139,3.23964844 C41.046792,0.0478298611 44.862396,0.0478298611 47.5211768,0.0478298611 C52.8059082,0.0478298611 53,0.0478298611 53,0.0478298611 L53,38 L-2.80579664e-23,38 L-2.80579664e-23,16.8888889 Z" id="Layer-1" fill="#F8E71C"></path>
+                <path d="M0,30.4222656 L5.08184082,30.4222656 C8.69013672,30.4222656 10.793833,30.3847439 16.1034082,28.8898546 C21.4129834,27.3949653 25.9875977,25.3333334 31.8470996,25.3333334 C36.929458,25.3333334 40.4632227,27.5355686 42.5764941,26.1320096 C44.6897656,24.7284505 45.7334619,21.1111111 50.6315625,21.1111111 L53,21.1111111 L53,38 L0,38 L0,30.4222656 Z" id="Layer-3" fill="#7BE380"></path>
+            </g>
+            <path d="M144.245283,24.2857143 C146.902502,24.2857143 149.056604,22.1110974 149.056604,19.4285714 C149.056604,16.7460455 146.902502,14.5714286 144.245283,14.5714286 C141.588064,14.5714286 139.433962,16.7460455 139.433962,19.4285714 C139.433962,22.1110974 141.588064,24.2857143 144.245283,24.2857143 Z" id="Layer-2" stroke="#263238" stroke-width="3.5" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+            <polyline id="Layer-3" stroke="#263238" stroke-width="3.5" opacity="0.148833786" stroke-linecap="round" stroke-linejoin="round" points="38.1255528 50.5714286 0.908571716 50.5714286 0.908571716 13 0.908571716 13"></polyline>
+            <path d="M128.460459,4.85714286 L126.054798,4.85714286" id="Layer-4" stroke="#263238" stroke-width="3.5" fill="#E1F2FA" opacity="0.498697917" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M128.460459,14.5714286 L126.054798,14.5714286" id="Layer-5" stroke="#263238" stroke-width="3.5" fill="#E1F2FA" opacity="0.498697917" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M128.460459,24.2857143 L126.054798,24.2857143" id="Layer-6" stroke="#263238" stroke-width="3.5" fill="#E1F2FA" opacity="0.498697917" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M128.460459,34 L126.054798,34" id="Layer-7" stroke="#263238" stroke-width="3.5" fill="#E1F2FA" opacity="0.498697917" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M128.460459,43.7142857 L126.054798,43.7142857" id="Layer-8" stroke="#263238" stroke-width="3.5" fill="#E1F2FA" opacity="0.498697917" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M171.762345,51 L171.762345,48.5714286" id="Layer-9" stroke="#263238" stroke-width="3.5" fill="#E1F2FA" opacity="0.498697917" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M162.139704,51 L162.139704,48.5714286" id="Layer-10" stroke="#263238" stroke-width="3.5" fill="#E1F2FA" opacity="0.498697917" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M152.517062,51 L152.517062,48.5714286" id="Layer-11" stroke="#263238" stroke-width="3.5" fill="#E1F2FA" opacity="0.498697917" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M143.894421,55 L143.894421,52.5714286" id="Layer-12" stroke="#263238" stroke-width="3.5" fill="#E1F2FA" opacity="0.498697917" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M133.271779,51 L133.271779,48.5714286" id="Layer-13" stroke="#263238" stroke-width="3.5" fill="#E1F2FA" opacity="0.498697917" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M143.245283,24.2857143 L143.245283,48.5714286" id="Layer-14" stroke="#263238" stroke-width="3.5" fill="#E1F2FA" opacity="0.498697917" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,6"></path>
+            <path d="M144.300081,0 L144.300081,14.6604656" id="Layer-15" stroke="#263238" stroke-width="3.5" fill="#E1F2FA" opacity="0.498697917" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,6"></path>
+        </g>
+        <text id="ENCyclopedia-Of-Tran" font-family="AmericanTypewriter-Bold, American Typewriter" font-size="12" font-weight="bold" letter-spacing="5.53999996" fill="#858086">
+            <tspan x="208" y="31">ENC</tspan>
+            <tspan x="251.536" y="31" font-family="AmericanTypewriter, American Typewriter" font-weight="normal">yclopedia </tspan>
+            <tspan x="364.62" y="31">O</tspan>
+            <tspan x="378.463999" y="31" font-family="AmericanTypewriter, American Typewriter" font-weight="normal">f </tspan>
+            <tspan x="208" y="45">T</tspan>
+            <tspan x="221.844" y="45" font-family="AmericanTypewriter, American Typewriter" font-weight="normal">ransposable </tspan>
+            <tspan x="360.768" y="45">E</tspan>
+            <tspan x="375.259999" y="45" font-family="AmericanTypewriter, American Typewriter" font-weight="normal">lements</tspan>
+        </text>
+    </g>
+</svg>
+
+<!-- <style>
+svg {
+   width: 100vw;
+   height: 100vh;
+}
+</style> -->

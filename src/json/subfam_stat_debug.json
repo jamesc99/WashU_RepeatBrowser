@@ -1,0 +1,14 @@
+{
+  "files": [{
+    "subfamStat": "https://repeatbrowser.s3.us-east-2.amazonaws.com/stat/testAligned.sortedByCoord.out.iteres.subfamily.stat",
+    "controls": "https://repeatbrowser.s3.us-east-2.amazonaws.com/stat/testAligned.sortedByCoord.out.iteres.subfamily.stat",
+    "Assay": "debug",
+    "Biosample_type": "debug",
+    "Experiment": "debug",
+    "Tissue": "debug",
+    "Organism": "debug",
+    "Target": "",
+    "File_accession": "debug",
+    "id": "debug"
+  }]
+}
