@@ -3,6 +3,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
+
 <script>
     import Modal from '../ui/Modal.svelte';
     import PivotTable from '../components/data-view/PivotTable.svelte';
@@ -20,13 +21,36 @@
         SecondaryText
     } from "@smui/list";
     import IconButton from '@smui/icon-button';
-
     import VirtualList from 'svelte-tiny-virtual-list';
 
     import {Cart} from "../stores/CartStore";
     import {onDestroy} from "svelte";
+    import defaultData from "../json/default_cart_data.json";
+    import {getZarrParameters} from '../api/inputdata';
+    import {TabixIndexedFile} from "@gmod/tabix";
+
     let cartData;
     let cartRepeats;
+
+
+    let tmp_url;
+    let zarr_url;
+    async function setUn() {
+        zarr_url = tmp_url;
+        const data_json = await getZarrParameters(zarr_url).then(data => {Cart.addDataItems([data]);});
+    }
+
+    let upload_files;
+    $: if (upload_files) {
+        // Note that `files` is of type `FileList`, not an Array:
+        // https://developer.mozilla.org/en-US/docs/Web/API/FileList
+        console.log(upload_files);
+
+        for (const file of upload_files) {
+            console.log(`${file.name}: ${file.size} bytes`);
+            console.log(`${file}`);
+        }
+    }
 
     const unsubscribe = Cart.subscribe(async store => {
         const { data, repeats } = store;
@@ -43,26 +67,27 @@
 </script>
 
 <div>
-    <div style="width:550px; height:auto; float:left; display:inline">
+    <div style="width:50%; height:auto; float:left; display:inline">
         <Modal>
             <PivotTable DATA={_data[mode]}/>
         </Modal>
     </div>
 
-    <div class="list" style="width:400px; height:auto; float:right; display:inline">
+    <div class="list" style="width:45%; height:auto; float:right; display:inline">
         <p>   Data </p>
         <VirtualList
                 height={100}
                 width="auto"
                 itemCount={cartData.length}
-                itemSize={60}>
+                itemSize={50}>
             <div slot="item" let:index let:style {style} class="row">
-                <IconButton class="material-icons"
-                            on:click={() => Cart.addDataItems($Cart.data.filter(
-                            d => d._id !== cartData[index]._id))}>
-                    cancel</IconButton>
+
 
                 <span>
+                    <IconButton class="material-icons"
+                                on:click={() => Cart.addDataItems($Cart.data.filter(
+                            d => d._id !== cartData[index]._id))}>
+                    cancel</IconButton>
                      Tissue: {cartData[index].Tissue} and Assay: {cartData[index].Assay}
                 </span>
 
@@ -83,7 +108,22 @@
         </VirtualList>
     </div>
 
+<!--    <label for="many">Upload multiple files of any type:</label>-->
+<!--    <input-->
+<!--            bind:files={upload_files}-->
+<!--            id="many"-->
+<!--            multiple-->
+<!--            type="file"-->
+<!--    />-->
+
+    <div>
+        <input bind:value={tmp_url} placeholder="enter the Zarr URL">
+        <button on:click={setUn}>Upload</button>
+    </div>
+
+
 </div>
+
 
 <style>
     IconButton{

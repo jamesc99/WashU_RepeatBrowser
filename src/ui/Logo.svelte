@@ -1,11 +1,6 @@
 <script>
-  import headerLogo from './logo.svg';
+  import headerLogo from './School_of_Medicine.svg';
 
-  function data() {
-    return {
-      beyonkLogo,
-    };
-  }
 </script>
 
 <div class="logo">

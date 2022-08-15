@@ -2,6 +2,7 @@
   "files": [{
     "subfamStat": "https://repeatbrowser.s3.us-east-2.amazonaws.com/stat/testAligned.sortedByCoord.out.iteres.subfamily.stat",
     "controls": "https://repeatbrowser.s3.us-east-2.amazonaws.com/stat/testAligned.sortedByCoord.out.iteres.subfamily.stat",
+    "Zarr": "https://repeatbrowsers.s3.us-east-2.amazonaws.com/Zarr_data/example.zarr",
     "Assay": "debug",
     "Biosample_type": "debug",
     "Experiment": "debug",

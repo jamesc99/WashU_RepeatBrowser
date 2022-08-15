@@ -32,7 +32,7 @@
 
 <style>
   :global(.demo-list) {
-    max-width: 40%;
+    max-width: 50%;
     margin-top: 2rem;
     margin-right: 10%;
     border: 1px solid rgba(0, 0, 0, 0.1);

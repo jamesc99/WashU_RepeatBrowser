@@ -3,9 +3,10 @@
   import { onMount, onDestroy } from 'svelte';
   import { Cart } from '../stores/CartStore';
   import PlotlyHeatmapSimple from './PlotlyHeatmapSimple';
-  import { getDataMatrix, makeClusterServerRequest, getDataMatrixSingle } from '../api/ratio';
+  import {getDataMatrix, makeClusterServerRequest, getDataMatrixSingle, getDataMatrix_debug} from '../api/ratio';
   import ClusterDraw from '../components/Clusterdraw.svelte';
   import LinearProgress from "../ui/LinearProgress.svelte";
+  import debug_data from "../json/subfam_stat_debug.json";
 
   // import DATA from '../json/test.datahubs.json';
   let dataPromise;
@@ -18,8 +19,10 @@
     const { data, repeats } = store;
     // if (data.length > 0 && repeats.length > 0) {
     if (repeats.length > 0) {
-      dataPromise = getDataMatrix(data, files, repeats.map(d => d.name));
+      // dataPromise = getDataMatrix(data, files, repeats.map(d => d.name));
+      dataPromise = getDataMatrix_debug(debug_data.files, repeats.map(r => r.name));
       heatmapData = await dataPromise;
+      //console.log('heatmapData: ' + dataPromise);
       // const dataFrame = JSON.stringify(heatmapData);
       // clusterPromise = makeClusterServerRequest(dataFrame);
       // clusterData = await clusterPromise;

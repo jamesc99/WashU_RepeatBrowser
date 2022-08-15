@@ -10,14 +10,17 @@
 
     return {
       subscribe,
+
       addDataItems: (newVal) => update(n => {
         n.data = newVal;
         return n;
       }),
+
       addRepeats: (newVal) => update(n => {
         n.repeats = newVal;
         return n;
       })
+
     }
   }
   export const Cart = createStore();

@@ -1,7 +1,7 @@
 <script>
   import { onMount, onDestroy } from 'svelte';
   import { Cart } from '../stores/CartStore';
-  import { getDataForHeatmapAll } from '../api/heatmap';
+  import { getDataForHeatmapAll, getZarrForHeatmapAll } from '../api/heatmap';
   import LinearProgress from '../ui/LinearProgress.svelte';
   import PlotlyHeatmap from './PlotlyHeatmap.svelte';
   import debug_data from "../json/subfam_stat_debug.json";
@@ -15,11 +15,9 @@
     const { data, repeats } = store;
     repeatLabels = repeats.map(d => d.name);
     if (data.length > 0 && repeats.length > 0) {
-      // dataPromise = getDataForHeatmapAll(data, 'subfamStat', repeats);
-      dataPromise = getDataForHeatmapAll(debug_data.files, 'subfamStat', repeats);
+      //dataPromise = getDataForHeatmapAll(data, 'subfamStat', repeats);
+      dataPromise = getZarrForHeatmapAll(debug_data.files, 'Zarr', repeats);
       heatmapData = await dataPromise;
-      console.log("This is heatmapData: " + heatmapData);
-      console.log("This is repeatLabels: " +repeatLabels);
       loaded = true;
     }
   });

@@ -1,6 +1,6 @@
 // import './App.scss';
-import './global.css';
-
+// import './global.css';
+import './smui.css';
 import App from './App.svelte';
 
 const app = new App({target: document.body});

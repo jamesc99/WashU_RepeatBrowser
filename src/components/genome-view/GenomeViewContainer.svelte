@@ -7,10 +7,11 @@
   import LinearProgress from "../../ui/LinearProgress.svelte";
   import { Cart } from "../../stores/CartStore";
   import { createSession } from './createSession';
+  import debug_data from "../../json/subfam_stat_debug.json";
 
 
   import { filterDataAboveCutoff } from "./helper";
-  import { fetchRPKMTabixChrAll } from "./helper-flat";
+  import { fetchRPKMTabixChrAll, getZarrLoci } from "./helper-flat";
   import fileDownload from 'js-file-download';
 
   //let { experiment, subfam } // comes from URL params
@@ -65,10 +66,15 @@
     //   console.log(err);
     //   loaded = false;
     //   });
-    const URL = $Cart.data.filter(file => file.File_accession === data)[0].subfamLoci;
+    // const URL = $Cart.data.filter(file => file.File_accession === data)[0].subfamLoci;
+
+    // For debug use
+    const debug = debug_data.files;
+    const zarr_url = debug[0].Zarr;
 
     try {
-      dataToRender = await fetchRPKMTabixChrAll(data, repeat, URL);
+      // dataToRender = await fetchRPKMTabixChrAll(data, repeat, URL);
+      dataToRender = await getZarrLoci(repeat, zarr_url);
       console.log(dataToRender);
       loaded = true;
       let result = [];

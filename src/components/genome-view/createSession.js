@@ -1,11 +1,17 @@
 export const createSession = function(input, count, subfam, uuid) {
 
-  const allDataPoints = input.map(chr => chr.values.map(d => {
-    let tmp = {...d};
-    tmp.chr = chr.key;
+  const allDataPoints = input.map(chr => {
+    if(chr.values){
+      return chr.values.map(d => {
+        let tmp = {...d};
+        tmp.chr = chr.key;
 
-    return tmp;
-  })).flat(2);
+        return tmp;
+      })
+    } else{
+      return 'undefied'
+    }
+  }).flat(2);
   const topTenEntries = calcTopEntries(allDataPoints, 'RPKM', count);
   const totalLength = calcTotalLength(topTenEntries);
 

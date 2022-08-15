@@ -1,4 +1,7 @@
 import axios from 'axios';
+import * as url from "url";
+const fetch = require('node-fetch')
+const zarrRemote = require('zarr-js')(fetch)
 // import pako from 'pako';
 // const http = require('http');
 // const decompressResponse = require('decompress-response');
@@ -11,6 +14,62 @@ export async function getFileAndUnzipAll(DATASET, KEY, SUBFAMILIES) {
 
   return result;
 }
+
+
+export async function getZarrStatdata(FILE) {
+    const zarr_url = FILE['Zarr'];
+    let chunksizes = [[0, 0], [1, 0], [2, 0]];
+    let dataname = 'subfam_stat';
+
+    const zarr_data = await Promise.all(chunksizes.map(
+        (key) =>
+            new Promise((resolve) => {
+                zarrRemote.openGroup(zarr_url, (err, group) => {
+                    group[dataname](key, function(err, array) {
+                        resolve(array.data)
+                    })
+                })
+            })
+        )
+    )
+
+    const result = { id: FILE.id, body: zarr_data};
+    //console.log('This is result: ' + result);
+    return result;
+}
+
+export function reshapeZarrStatFormat(input) {
+    const { id, body } = input;
+    const subfamily = body[0];
+    const ALL_RPKM = body[1];
+    const UNI_RPKM = body[2];
+    const length = subfamily.length;
+
+    const objOutput = {
+        all: {},
+        unique: {}
+    }
+    let tmp_all = {};
+    let tmp_uniq = {};
+
+    for (var i = 1; i < subfamily.length; i++){
+        tmp_uniq[subfamily[i]] = UNI_RPKM[i];
+        tmp_all[subfamily[i]] = ALL_RPKM[i];
+    }
+
+    objOutput.all = {
+        id,
+        ...tmp_all
+    }
+
+    objOutput.unique = {
+        id,
+        ...tmp_uniq
+    }
+
+    return objOutput;
+}
+
 
 // function reshapeForResponse(input, SUBFAMILIES) {
 //   const tmp = {

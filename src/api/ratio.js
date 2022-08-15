@@ -2,6 +2,7 @@ import CONFIG from '../config/settings.json';
 import axios from 'axios';
 import { subfamilies } from '../json/classification.json';
 const SUBFAM_LOOKUP = subfamilies;
+const ALL_READS_RPKM_STAT_POSITION = 8;
 // data fetch api calls
 const fetchIteresStat = async function (dataId) {
     let API_URL = `${CONFIG.WEB_ASSETS_URL_AWS}/${dataId}/data.iteres.subfamily.stat`
@@ -70,6 +71,7 @@ const getDataMatrix = async function (data, files, subfamList) {
 
 export {getDataMatrix}
 
+
 const fetchData = async function (dataIds, FILES) {
     
     let dataFetchPromises = {}
@@ -94,7 +96,7 @@ const fetchData = async function (dataIds, FILES) {
             console.log('Error fetching dataFetchPromises.background' + e);
         }
     }
-    
+
     return fetchedData
 }
 
@@ -243,4 +245,76 @@ export const transformDataForFlatHeatmap = function(input) {
     });
 
     return result;
+}
+
+
+
+const getDataMatrix_debug = async function (data, subfamList) {
+    let datas = data;
+    let dataPromises = datas.map( d => {
+            const { subfamStat, controls } = d; // subfamStat, controls are urls
+            return fetchData_stat({signal: subfamStat, background: controls});
+        }
+    );
+
+    let experimentData = await Promise.all(dataPromises); //the experimentData should be two RPKM.
+    console.log('experiment :' + experimentData);
+
+    let ratios = experimentData.map(experiment => getRatios_debug(experiment, subfamList)) // This step is to calculate the RPKM directly.
+    let matrix = {}
+    matrix.colLabels = subfamList;
+    matrix.rowNames = data.map(d => d.id);
+    //let matrix = makeMatrixDetails(experiments, subfamList)
+    matrix.data = ratios
+
+    return matrix
+}
+
+export {getDataMatrix_debug}
+
+const fetchData_stat = async function (dataurls) {
+
+    let dataFetchPromises = {};
+
+    dataFetchPromises["signal"] = await read_stat(dataurls.signal);
+    dataFetchPromises["background"] = await read_stat(dataurls.background);
+
+    return dataFetchPromises
+}
+
+export {fetchData_stat}
+
+const getRatios_debug = function (fetchedData, subfamList) {
+    return subfamList.map(subfam => getRatio_debug(fetchedData, subfam))
+}
+export {getRatios_debug}
+
+// Non exported functions
+
+function getRatio_debug(fetchedData, subfam) {
+
+    let subfamItems = {}
+
+    subfamItems.signal = fetchedData.signal[subfam];
+    subfamItems.background = fetchedData.background[subfam];
+
+    let ratio = Math.log2(subfamItems.signal / subfamItems.background);
+    console.log('ratio is: ' + ratio);
+    return ratio;
+}
+
+async function read_stat(input_url){
+    let input = await axios.get(input_url).then(signal => signal.data);
+    let return_value = {};
+
+    const datalines = input.split('\n');
+
+    datalines.slice(1).forEach(line => {
+        // tmp_all[d] = body[d].all_reads_RPKM;
+        // tmp_uniq[d] = body[d].unique_reads_RPKM;
+        line = line.split("\t");
+        return_value[line[0]] = line[ALL_READS_RPKM_STAT_POSITION];
+    });
+
+    return return_value
 }

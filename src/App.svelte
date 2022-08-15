@@ -1,3 +1,6 @@
+<svelte:head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+</svelte:head>
 
 <script>
   import {onMount} from 'svelte';
@@ -17,6 +20,8 @@
   import GenomeViewRatioContainer from "./components/genome-view/GenomeViewRatioContainer.svelte";
   import PivotTable from './components/data-view/PivotTable.svelte';
   import LinearProgress from "./ui/LinearProgress.svelte";
+  import Header from "./ui/header.svelte"
+  import Footer from "./ui/footer.svelte"
   import Logo from "./ui/Logo.svelte";
   import CartComponent from "./components/Cart.svelte";
   import CartIndicator from './ui/CartIndicator.svelte';
@@ -25,9 +30,14 @@
   import _data from "./json/main.json";
   import defaultData from './json/default_cart_data.json';
   import DataTable from './examples/DataTab.svelte'
+  import { TabContent, TabPane } from 'sveltestrap';
+
 
   import {Cart} from "./stores/CartStore";
   import DataTab from "./examples/DataTab.svelte";
+  import Homepage from "./examples/Homepage.svelte";
+  // import ZoomableSunburst from "./examples/ZoomableSunburst.svelte";
+  import Zoom_Sunburst from "./examples/Zoom_Sunburst.svelte";
 
   let dataInStore;
   let repeatsInStore;
@@ -83,8 +93,10 @@
     },
   ];
 
-  let keyedTabsActive = iconTabs[1];
+  let keyedTabsActive = iconTabs[0];
   let combination = undefined;
+
+  let vertical_active = true;
 
   function handleHeatmapClick(event) {
     combination = event.detail;
@@ -104,7 +116,6 @@
 </script>
 
 <style>
-
   Modal {
     width: 80%;
     margin-left: 40%;
@@ -115,11 +126,15 @@
   }
 
   .main-body {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 2rem;
-  } 
+  }
+
+  .tab-bar {
+    width: 100%;
+  }
 
   .heatmap-hide {
     display: none;
@@ -134,15 +149,8 @@
 </style>
 
 <div>
-  <div class="svg-box">
-  <Logo />
-  </div>
+  <Header />
 
-  <div class="flex justify-center">
-    <Switch on:mode-change={handleModeChange}/>
-  </div>
-
-  <div class="border-t-2 border-blue-300 my-8"></div>
   <TabBar
     tabs={iconTabs}
     let:tab key={tab => tab.k}
@@ -151,7 +159,8 @@
       {tab}
       stacked={true}
       indicatorSpanOnlyContent={true}
-      tabIndicator$transition="fade">
+      tabIndicator$transition="fade"
+      >
       <Icon class="material-icons">{tab.icon}</Icon>
       <Label>
       {#if tab.k === 3}
@@ -162,34 +171,33 @@
       </Label>
     </Tab>
   </TabBar>
-  <div class="border-t-2 border-orange-300 py-2 my-2"></div>
-
 
   <div class="main-body">
-    <!-- <ContactCard/> -->
-    <!-- <DataCenter/> -->
-    <!-- <ChartExample/> -->
-    <!-- <AreaChartExample/>  -->
-    <!-- <IdeogramExample/>  -->
-    <!-- <PackChartExample/> -->
-    <!-- <PlotlyHeatmapRatio/> -->
-    <!-- <PlotlyAreaChart/> -->
-    <!-- <ConsensusContainer/> -->
-    <!-- <GenomeViewContainer/> -->
-    <!-- <GenomeViewRatioContainer/> -->
-    {#if keyedTabsActive.k === 5}
+    {#if keyedTabsActive.k === 0}
+      <Homepage/>
+
+    {:else if keyedTabsActive.k === 5}
       <!-- <DataCenter DATA={_data[mode]}/> -->
 <!--      <Modal>-->
 <!--        <PivotTable DATA={_data[mode]}/>-->
 <!--      </Modal>-->
       <DataTab {mode}/>
 
-
     {:else if keyedTabsActive.k === 1}
       {#if mode === 'experiments'}
         <PlotlyHeatmapRatio on:heatmap-click={handleHeatmapClick} files={_data.files} />
       {:else}
+        <TabContent vertical pills>
+          <TabPane tabId="ALL" tab="ALL" bind:active={vertical_active}>
+            <h2>ALL</h2>
+          </TabPane>
+          <TabPane tabId="Unique" tab="Unique">
+            <h2>Unique</h2>
+            <p>Todo: Add the uni div</p>
+          </TabPane>
+        </TabContent>
         <PlotlyHeatmapContainer on:heatmap-click={handleHeatmapClick} />
+
       {/if}
 
     {:else if keyedTabsActive.k === 2}
@@ -204,10 +212,25 @@
       {/if}
 
     {:else if keyedTabsActive.k === 4}
-      <PackChartRepeats />
-
+<!--      <PackChartRepeats />-->
+<!--      <ZoomableSunburst />-->
+      <Zoom_Sunburst/>
     {:else if keyedTabsActive.k === 3}
-      <CartComponent />
+      <TabContent vertical pills>
+        <TabPane tabId="ALL" tab="ALL" active>
+          <h2>ALL</h2>
+          <CartComponent />
+        </TabPane>
+        <TabPane tabId="Repeats" tab="Repeats">
+          <h2>Repeat select</h2>
+          <Zoom_Sunburst/>
+        </TabPane>
+        <TabPane tabId="File" tab="File">
+          <h2>File Select</h2>
+          <DataTab {mode}/>
+        </TabPane>
+      </TabContent>
+
 
     {:else if keyedTabsActive.k === 6}
       {#if combination !== undefined}
@@ -225,6 +248,8 @@
     {/if}
 
   </div>
+
+  <Footer/>
 
 <!--  <div class:heatmap-hide={keyedTabsActive.k !== 1}>-->
 <!--    {#if mode === 'experiments'}-->

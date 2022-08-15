@@ -18,6 +18,7 @@
   onMount(async () => {
     const { data, repeat } = combination;
     const experiment = _data.experiments.filter(exp => exp.id === data)[0];
+    //console.log('experiment is: ' + _data.experiments.filter(exp => exp.id === data));
     try {
       const res = await fetchConsensusDataAll(experiment, repeat, files);      
       consensusData = res;

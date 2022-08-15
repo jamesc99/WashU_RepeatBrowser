@@ -1,4 +1,9 @@
+<svelte:head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+</svelte:head>
+
 <script>
+  import { TabContent, TabPane } from 'sveltestrap';
   // const TEST_DATA = require('../json/test.json');
   import { onMount, onDestroy, afterUpdate, createEventDispatcher } from 'svelte';
   import { Cart } from '../stores/CartStore';

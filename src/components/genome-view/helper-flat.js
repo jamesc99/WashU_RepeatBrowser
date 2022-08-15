@@ -1,4 +1,6 @@
 import TabixSource from '../../api/TabixSource';
+const fetch = require('node-fetch')
+const zarrRemote = require('zarr-js')(fetch)
 
 export const fetchRPKMTabixChrAll = async function (dataId, subfamily, URL) {        // not restricted to a single chr
 
@@ -39,4 +41,49 @@ function nestByChr(parsedInput) {
                           .entries(parsedInput);
 
   return nestedByChr;
+}
+
+export async function getZarrLoci(subfam, zarr_url){
+    let loci_promise = new Promise((resolve) => {
+        zarrRemote.openGroup(zarr_url, (err, group, metadata) => {
+            group[`loci_${subfam}`]([0], function(err, array){
+                const raw_data = array.data;
+
+                let chro_dict = {};
+                for(let i = 0; i < raw_data.length; i=i+4){
+                    let chrome = raw_data[i];
+                    let start = raw_data[i+1];
+                    let end = raw_data[i+2];
+                    let RPKM = raw_data[i+3];
+                    if(chro_dict[`${chrome}`]){
+                        chro_dict[`${chrome}`].push({'chr': chrome, 'start': start, 'end': end, 'RPKM': parseFloat(RPKM)});
+                    }
+                    else{
+                        chro_dict[`${chrome}`] = [{'chr': chrome, 'start': start, 'end': end, 'RPKM': parseFloat(RPKM)}];
+                    }
+                }
+
+                let return_array = new Array();
+                for(let i = 0; i < 22; i++){
+                    if(i == 0){
+                        // return_array[i] = {'chrX': chro_dict['chrx']};
+                        if(chro_dict['chrX']){
+                            return_array.push({key: 'chrX', values: chro_dict['chrX']});
+                        }
+
+                    }
+                    else {
+                        if(chro_dict[`chr${i}`]){
+                            return_array.push({key: `chr${i}`, values: chro_dict[`chr${i}`]});
+                        }
+                    }
+                }
+                resolve(return_array);
+            })
+        })
+    })
+
+    let return_value = await loci_promise;
+
+    return return_value
 }

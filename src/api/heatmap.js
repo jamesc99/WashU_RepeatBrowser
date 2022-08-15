@@ -1,7 +1,7 @@
 import axios from 'axios';
 // import pako from 'pako';
 // import {getMultipleTabixRegions} from './getMultipleTabixRegions';
-import { getFileAndUnzipAll } from './getFileAndUnzipAll';
+import {getFileAndUnzipAll, getZarrStatdata, reshapeZarrStatFormat} from './getFileAndUnzipAll';
 import * as _ from 'lodash';
 import { TabixIndexedFile } from '@gmod/tabix';
 const RemoteFile = require('generic-filehandle');
@@ -186,9 +186,8 @@ export async function getDataForHeatmapAll(DATASETS, KEY, SUBFAMILIES) {
         console.log(error)
         return error;
     }
-    
-
 }
+
 /**
  *
  * @param {Array} input e.g. ["LTR1B	0	1	{"family":"ERV1","class":"LTR","consensus_length":824,"reads_count":2660,"unique_reads_count":2475,"total_length":207274,"genome_count":320,"all_reads_RPKM":0.470,"all_reads_RPM":97.507,"unique_reads_RPKM":0.515,"unique_reads_RPM":106.831}"]
@@ -259,7 +258,6 @@ function reshapeFormat(input) {
             id,
             ...tmp_uniq
         }
-
 
     return objOutput;
 }
@@ -395,4 +393,77 @@ const makeArrayChunks = (array, chunk_size) => Array(Math.ceil(array.length / ch
 function storeInLocalStorage(input) {
 
     localStorage.setItem('DATASETS', JSON.stringify(input));
+}
+
+
+export async function getZarrForHeatmapAll(DATASETS, KEY, SUBFAMILIES) {
+
+    try {
+        if (DATASETS === undefined || DATASETS.length == 0) { // array empty or does not exist
+            throw new Error('Valid DATASETS list was not provided');
+        }
+
+        const promisesList = [];
+        let dataAll = {};
+        let dataFetchedBefore = [];
+        let dataFetchedNow = [];
+
+        // DATASETS.forEach(DATASET => {
+        //     promisesList.push(getFileAndUnzipAll(DATASET, KEY));
+        // })
+
+        DATASETS.forEach(FILE => {
+            promisesList.push(getZarrStatdata(FILE));
+        })
+
+        dataFetchedNow = await Promise.all(promisesList);
+        const allDataList = dataFetchedBefore.concat(dataFetchedNow);
+        const dataFormatted = allDataList.map(item => reshapeZarrStatFormat(item));
+
+        // const dataFilteredForSubfamilies = filterForRequestedRepeats(allDataList, SUBFAMILIES);
+        // storeInLocalStorage(dataFilteredForSubfamilies);
+
+        let objToReturn = { all: [], unique: [] };
+        dataFormatted.forEach(d => {
+            const { all, unique } = d;
+            objToReturn.all.push(all);
+            objToReturn.unique.push(unique);
+        })
+        // console.log(objToReturn);
+        return objToReturn;
+
+    } catch(error) {
+        console.log(error)
+        return error;
+    }
+}
+
+export async function FetchZarrData(DATASETS, KEY, SUBFAMILIES) {
+    try {
+        if (DATASETS === undefined || DATASETS.length == 0) { // array empty or does not exist
+            throw new Error('Valid DATASETS list was not provided');
+        }
+
+        const promisesList = [];
+        let dataAll = {};
+        let dataFetchedBefore = [];
+        let dataFetchedNow = [];
+
+        // DATASETS.forEach(DATASET => {
+        //     promisesList.push(getFileAndUnzipAll(DATASET, KEY));
+        // })
+
+        DATASETS.forEach(FILE => {
+            promisesList.push(getZarrStatdata(FILE));
+        })
+
+        dataFetchedNow = await Promise.all(promisesList);
+        const allDataList = dataFetchedBefore.concat(dataFetchedNow);
+
+        return allDataList
+
+    } catch(error) {
+        console.log(error)
+        return error;
+    }
 }

@@ -1,8 +1,9 @@
 <script>
   import { onMount, onDestroy } from "svelte";
-  import fetchConsensusData from "./utils";
+  import {fetchConsensusData, fetchConsensusDatabyZarr} from "./utils";
   import PlotlyAreaChart from "../../examples/PlotlyAreaChart.svelte";
   import LinearProgress from "../../ui/LinearProgress.svelte";
+  import debug_data from "../../json/subfam_stat_debug.json";
   import { Cart } from '../../stores/CartStore';
   let loaded = false;
   let error = undefined;
@@ -16,7 +17,10 @@
     const { data, repeat } = combination;
     const dataFile = $Cart.data.filter(file => file.File_accession === data);
     try {
-      const res = await fetchConsensusData(dataFile, repeat);
+      // const res = await fetchConsensusData(dataFile, repeat);
+      const debug_file = debug_data.files;
+      const res = await fetchConsensusDatabyZarr(debug_file, repeat);
+      console.log(res)
       consensusData = res;
       loaded = true;
     } catch (error) {
