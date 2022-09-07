@@ -164,7 +164,7 @@
 		</slot>
 	{#each c_rows as row, n}
 		<slot name="row" row={row} n={n}> 
-			<tr on:click={()=>{handleClickRow(row)}} class:selected={dataIds.indexOf(row.id)>=0} >
+			<tr on:click={()=>{handleClickRow(row)}} class:selected={1 > 0} >
 			  {#each columns as col}
 			  	<td
 						on:click={()=>{handleClickCell(row, col.key)}}

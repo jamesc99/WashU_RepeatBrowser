@@ -13,6 +13,8 @@
   import { filterDataAboveCutoff } from "./helper";
   import { fetchRPKMTabixChrAll, getZarrLoci } from "./helper-flat";
   import fileDownload from 'js-file-download';
+  import { getContext } from 'svelte';
+  import DataAxis from "./DataAxis.svelte";
 
   //let { experiment, subfam } // comes from URL params
   const experiment = "ENCSR658AGP";
@@ -93,6 +95,13 @@
     }
 
   });
+
+  const { open } = getContext('simple-modal');
+
+  const showModal = (event) => {
+    console.log(event);
+    open(DataAxis, {data: event.detail});
+  };
 </script>
 
 
@@ -104,7 +113,8 @@
     <!-- <Slider on:slider-move={handleSliderValue} extent={data.extent} />-->
     <div class="tooltip" id="genome-tooltip" />
     {#each dataToRender as item, i}
-      <Chromosome key={item.key} chr={item.key} data={item.values} />
+      <Chromosome on:genome-click={showModal} key={item.key} chr={item.key} data={item.values} />
+<!--      <Chromosome key={item.key} chr={item.key} data={item.values} />-->
     {/each}
   {:else if error !== undefined}
     <p>{error}</p>

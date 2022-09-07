@@ -3,6 +3,11 @@
   import { PivotData } from "./Utilities";
   import { spanSize } from "./helper";
   import { formatCellInfo, getFiltered } from './data-helper';
+  import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
+  import LayoutGrid from '@smui/layout-grid';
+  import Tabulator from 'tabulator-tables';
+
+
   const dispatch = createEventDispatcher();
   export let data;
 
@@ -18,13 +23,14 @@
     rowAttrs = pivotData.props.rows;
     rowKeys = pivotData.getRowKeys();
     colKeys = pivotData.getColKeys();
+
+    console.log(rowKeys)
   });
 
   function handleCellClick(input) {
       let filteredResults = getFiltered(data.data, input);
       dispatch('cell-click', filteredResults);
   }
-
 
 </script>
 
@@ -65,76 +71,192 @@
   }
 </style>
 
-<table class="pvtTable" align="center">
-  <thead>
-    {#each colAttrs as c, j}
-      <tr key={`colAttr${j}`}>
+<!--<LayoutGrid>-->
+<!--  {#each Array(9) as _unused, i}-->
+<!--    <Cell>-->
+<!--      <div class="demo-cell">Cell {i + 1}</div>-->
+<!--    </Cell>-->
+<!--  {/each}-->
+<!--</LayoutGrid>-->
+<!--<table class="pvtTable" align="center">-->
+<!--  <thead>-->
+<!--    {#each colAttrs as c, j}-->
+<!--      <tr key={`colAttr${j}`}>-->
 
-        {#each rowAttrs as r, i}
-          <th class="pvtAxisLabel" key={`rowAttr${i}`}
-              rowspan="2">{r}</th> <!-- where 2 stands for rowAttrs and keys (1 + 1). -->
+<!--        {#each rowAttrs as r, i}-->
+<!--          <th class="pvtAxisLabel" key={`rowAttr${i}`}-->
+<!--              rowspan="2">{r}</th> &lt;!&ndash; where 2 stands for rowAttrs and keys (1 + 1). &ndash;&gt;-->
+<!--        {/each}-->
+
+<!--        &lt;!&ndash;-->
+<!--        {#if j === 0 && rowAttrs.length !== 0}-->
+<!--          <th colSpan={rowAttrs.length} rowSpan={colAttrs.length} />-->
+<!--        {/if}-->
+<!--        &ndash;&gt;-->
+
+<!--          <th colspan={colKeys.length} class="pvtAxisLabel">{c}</th>-->
+<!--      </tr>-->
+
+<!--      <tr>-->
+<!--        {#each colKeys as colKey, i}-->
+<!--          {#if spanSize(colKeys, i, j) !== -1}-->
+<!--            <th-->
+<!--              class="pvtColLabel"-->
+<!--              key={`colKey${i}`}-->
+<!--              colSpan={spanSize(colKeys, i, j)}-->
+<!--              rowSpan={(j === colAttrs.length - 1) && (rowAttrs.length !== 0) ? 2 : 1}>-->
+<!--              {colKey[j]}-->
+<!--              &lt;!&ndash; {#if colAttrs.length > 1 && colAttrs.length - 1 === j}-->
+<!--                <div class="rotate text-xs">{colKey[j]}</div>-->
+<!--              {:else}{colKey[j]}{/if} &ndash;&gt;-->
+<!--            </th>-->
+<!--          {/if}-->
+<!--        {/each}-->
+<!--      </tr>-->
+<!--    {/each}-->
+<!--  </thead>-->
+
+
+<!--  <tbody>-->
+<!--    {#each rowKeys as rowKey, i}-->
+<!--      <tr key={`rowKeyRow${i}`}>-->
+
+<!--        {#each rowKey as txt, j}-->
+<!--          {#if spanSize(rowKeys, i, j) !== -1}-->
+<!--            <th-->
+<!--              key={`rowKeyLabel${i}-${j}`}-->
+<!--              class="pvtRowLabel"-->
+<!--              rowSpan={spanSize(rowKeys, i, j)}>-->
+<!--              &lt;!&ndash; colSpan={j === rowAttrs.length - 1 && colAttrs.length !== 0 ? 1 : 2} &ndash;&gt;-->
+<!--              {#if rowAttrs.length !== 1 && spanSize(rowKeys, i, j) > 3}-->
+<!--                <div>{txt}</div>-->
+<!--              {:else}{txt}{/if}-->
+<!--            </th>-->
+<!--          {/if}-->
+<!--        {/each}-->
+<!--        {#each colKeys as colKey, j}-->
+<!--          <td-->
+<!--            class={`pvtVal pvtValue`}-->
+<!--            key={`pvtVal${i}-${j}`}-->
+<!--            on:click={() => handleCellClick(formatCellInfo(rowAttrs, rowKey, colAttrs, colKey, pivotData-->
+<!--                    .getAggregator(rowKey, colKey)-->
+<!--                    .value()))}>-->
+
+<!--            {pivotData-->
+<!--              .getAggregator(rowKey, colKey)-->
+<!--              .value() ? pivotData.getAggregator(rowKey, colKey).value() : ''}-->
+<!--          </td>-->
+<!--        {/each}-->
+<!--      </tr>-->
+<!--    {/each}-->
+<!--  </tbody>-->
+<!--</table>-->
+<DataTable table$aria-label="File list" style="width: 100%;">
+  <Head>
+    <Row>
+      {#each rowAttrs as rattr, count_r}
+        <Cell style="width: 35%;font-size: 1.3em">{rattr}</Cell>
+      {/each}
+      {#each colAttrs as cattr, count_a}
+        {#each colKeys as ckey, count_k}
+          <Cell style="font-size: 1.3em;">{ckey[count_a]}</Cell>
         {/each}
+      {/each}
+    </Row>
+  </Head>
 
-        <!--
-        {#if j === 0 && rowAttrs.length !== 0}
-          <th colSpan={rowAttrs.length} rowSpan={colAttrs.length} />
-        {/if}
-        -->
-
-          <th colspan={colKeys.length} class="pvtAxisLabel">{c}</th>
-      </tr>
-
-      <tr>
-        {#each colKeys as colKey, i}
-          {#if spanSize(colKeys, i, j) !== -1}
-            <th
-              class="pvtColLabel"
-              key={`colKey${i}`}
-              colSpan={spanSize(colKeys, i, j)}
-              rowSpan={(j === colAttrs.length - 1) && (rowAttrs.length !== 0) ? 2 : 1}>
-              {colKey[j]}
-              <!-- {#if colAttrs.length > 1 && colAttrs.length - 1 === j}
-                <div class="rotate text-xs">{colKey[j]}</div>
-              {:else}{colKey[j]}{/if} -->
-            </th>
-          {/if}
-        {/each}
-      </tr>
+  <Body>
+  {#each rowKeys as rowKey, i}
+    <Row>
+    {#each rowKey as txt, j}
+      <Cell style="font-size: 1.2em;">{txt}</Cell>
     {/each}
-  </thead>
 
-
-  <tbody>
-    {#each rowKeys as rowKey, i}
-      <tr key={`rowKeyRow${i}`}>
-
-        {#each rowKey as txt, j}
-          {#if spanSize(rowKeys, i, j) !== -1}
-            <th
-              key={`rowKeyLabel${i}-${j}`}
-              class="pvtRowLabel"
-              rowSpan={spanSize(rowKeys, i, j)}>
-              <!-- colSpan={j === rowAttrs.length - 1 && colAttrs.length !== 0 ? 1 : 2} -->
-              {#if rowAttrs.length !== 1 && spanSize(rowKeys, i, j) > 3}
-                <div>{txt}</div>
-              {:else}{txt}{/if}
-            </th>
-          {/if}
-        {/each}
-        {#each colKeys as colKey, j}
-          <td
-            class={`pvtVal pvtValue`}
-            key={`pvtVal${i}-${j}`}
+    {#each colKeys as colKey, j}
+      <Cell style="font-size: 1.2em; cursor: pointer;"
             on:click={() => handleCellClick(formatCellInfo(rowAttrs, rowKey, colAttrs, colKey, pivotData
                     .getAggregator(rowKey, colKey)
                     .value()))}>
-
-            {pivotData
+        {pivotData
               .getAggregator(rowKey, colKey)
               .value() ? pivotData.getAggregator(rowKey, colKey).value() : ''}
-          </td>
-        {/each}
-      </tr>
+      </Cell>
     {/each}
-  </tbody>
-</table>
+    </Row>
+  {/each}
+  </Body>
+</DataTable>
+
+<!--<table class="pvtTable" align="center">-->
+<!--  <thead>-->
+<!--  {#each colAttrs as c, j}-->
+<!--    <tr key={`colAttr${j}`}>-->
+
+<!--      {#each rowAttrs as r, i}-->
+<!--        <th class="pvtAxisLabel" key={`rowAttr${i}`}-->
+<!--            rowspan="2">{r}</th> &lt;!&ndash; where 2 stands for rowAttrs and keys (1 + 1). &ndash;&gt;-->
+<!--      {/each}-->
+
+<!--      &lt;!&ndash;-->
+<!--      {#if j === 0 && rowAttrs.length !== 0}-->
+<!--        <th colSpan={rowAttrs.length} rowSpan={colAttrs.length} />-->
+<!--      {/if}-->
+<!--      &ndash;&gt;-->
+
+<!--      <th colspan={colKeys.length} class="pvtAxisLabel">{c}</th>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--      {#each colKeys as colKey, i}-->
+<!--        {#if spanSize(colKeys, i, j) !== -1}-->
+<!--          <th-->
+<!--                  class="pvtColLabel"-->
+<!--                  key={`colKey${i}`}-->
+<!--                  colSpan={spanSize(colKeys, i, j)}-->
+<!--                  rowSpan={(j === colAttrs.length - 1) && (rowAttrs.length !== 0) ? 2 : 1}>-->
+<!--            {colKey[j]}-->
+<!--            &lt;!&ndash; {#if colAttrs.length > 1 && colAttrs.length - 1 === j}-->
+<!--              <div class="rotate text-xs">{colKey[j]}</div>-->
+<!--            {:else}{colKey[j]}{/if} &ndash;&gt;-->
+<!--          </th>-->
+<!--        {/if}-->
+<!--      {/each}-->
+<!--    </tr>-->
+<!--  {/each}-->
+<!--  </thead>-->
+
+
+<!--  <tbody>-->
+<!--  {#each rowKeys as rowKey, i}-->
+<!--    <tr key={`rowKeyRow${i}`}>-->
+
+<!--      {#each rowKey as txt, j}-->
+<!--        {#if spanSize(rowKeys, i, j) !== -1}-->
+<!--          <th-->
+<!--                  key={`rowKeyLabel${i}-${j}`}-->
+<!--                  class="pvtRowLabel"-->
+<!--                  rowSpan={spanSize(rowKeys, i, j)}>-->
+<!--            &lt;!&ndash; colSpan={j === rowAttrs.length - 1 && colAttrs.length !== 0 ? 1 : 2} &ndash;&gt;-->
+<!--            {#if rowAttrs.length !== 1 && spanSize(rowKeys, i, j) > 3}-->
+<!--              <div>{txt}</div>-->
+<!--            {:else}{txt}{/if}-->
+<!--          </th>-->
+<!--        {/if}-->
+<!--      {/each}-->
+<!--      {#each colKeys as colKey, j}-->
+<!--        <td-->
+<!--                class={`pvtVal pvtValue`}-->
+<!--                key={`pvtVal${i}-${j}`}-->
+<!--                on:click={() => handleCellClick(formatCellInfo(rowAttrs, rowKey, colAttrs, colKey, pivotData-->
+<!--                    .getAggregator(rowKey, colKey)-->
+<!--                    .value()))}>-->
+
+<!--          {pivotData-->
+<!--                  .getAggregator(rowKey, colKey)-->
+<!--                  .value() ? pivotData.getAggregator(rowKey, colKey).value() : ''}-->
+<!--        </td>-->
+<!--      {/each}-->
+<!--    </tr>-->
+<!--  {/each}-->
+<!--  </tbody>-->
+<!--</table>-->

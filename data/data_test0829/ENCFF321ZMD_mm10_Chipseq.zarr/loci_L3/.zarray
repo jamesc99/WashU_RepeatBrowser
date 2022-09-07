@@ -1,0 +1,17 @@
+{
+    "chunks": [
+        17084
+    ],
+    "compressor": {
+        "id": "zlib",
+        "level": 1
+    },
+    "dtype": "<U32",
+    "fill_value": "",
+    "filters": null,
+    "order": "C",
+    "shape": [
+        17084
+    ],
+    "zarr_format": 2
+}

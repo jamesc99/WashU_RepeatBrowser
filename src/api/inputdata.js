@@ -18,6 +18,4 @@ export async function getZarrParameters(url) {
         console.log(error);
         return error;
     }
-
-
 }

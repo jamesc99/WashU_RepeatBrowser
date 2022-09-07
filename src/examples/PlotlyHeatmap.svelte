@@ -27,6 +27,7 @@
   onMount(() => {
     dataLabels = propsData[TYPE].map(d => d.id);
     onlyData = extractRequiredDataPoints(propsData, repeatLabels, TYPE);
+    console.log(propsData);
     if (onlyData !== undefined) {
       drawHeatMap(onlyData, repeatLabels, dataLabels);
     }
@@ -51,7 +52,7 @@
     }
     ];
 
-    Plotly.newPlot('myDiv', data, {responsive: true, margin: { l: 100, b: 40, r: 18, t: 15 }});
+    Plotly.newPlot('myDiv', data, {responsive: true, margin: { l: 100, b: 80, r: 18, t: 40}});
 
     myPlot.on('plotly_click', function(data){
       var pts = {};
@@ -80,7 +81,7 @@
   }
 </script>
 
-<!-- <style>-->
+<!--<style>-->
 <!--  #myDiv {-->
 <!--    margin: 2rem;-->
 <!--    padding-left: 2rem;-->

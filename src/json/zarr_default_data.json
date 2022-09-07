@@ -1,0 +1,80 @@
+{
+  "data": [{
+    "Zarr": "http://127.0.0.1:8081/ENCFF293TTH_mm10_DNaseseq.zarr",
+    "Assay": "DNase-seq",
+    "Biosample_type": "debug",
+    "Experiment": "debug",
+    "Tissue": "debug",
+    "Organism": "debug",
+    "Target": "",
+    "File_accession": "ENCFF293TTH",
+    "id": "ENCFF293TTH"
+  },
+    {
+      "Zarr": "http://127.0.0.1:8081/ENCFF321ZMD_mm10_Chipseq.zarr",
+      "Assay": "ChIP-seq",
+      "Biosample_type": "debug",
+      "Experiment": "debug",
+      "Tissue": "debug",
+      "Organism": "debug",
+      "Target": "",
+      "File_accession": "ENCFF321ZMD",
+      "id": "ENCFF321ZMD"
+    },
+    {
+      "Zarr": "http://127.0.0.1:8081/ENCFF390DDO_hg38_Chipseq.zarr",
+      "Assay": "ChIP-seq",
+      "Biosample_type": "debug",
+      "Experiment": "debug",
+      "Tissue": "debug",
+      "Organism": "debug",
+      "Target": "",
+      "File_accession": "ENCFF390DDO",
+      "id": "ENCFF390DDO"
+    },
+    {
+      "Zarr": "http://127.0.0.1:8081/ENCFF478FUY_hg38_RNAseq.zarr",
+      "Assay": "RNA-seq",
+      "Biosample_type": "debug",
+      "Experiment": "debug",
+      "Tissue": "debug",
+      "Organism": "debug",
+      "Target": "",
+      "File_accession": "ENCFF478FUY",
+      "id": "ENCFF478FUY"
+    },
+    {
+      "Zarr": "http://127.0.0.1:8081/ENCFF641ABP_hg38_DNaseseq.zarr",
+      "Assay": "RNA-seq",
+      "Biosample_type": "debug",
+      "Experiment": "debug",
+      "Tissue": "debug",
+      "Organism": "debug",
+      "Target": "",
+      "File_accession": "ENCFF641ABP",
+      "id": "ENCFF641ABP"
+    },
+    {
+      "Zarr": "http://127.0.0.1:8081/ENCFF643XFK_mm10_RNAseq.zarr",
+      "Assay": "RNA-seq",
+      "Biosample_type": "debug",
+      "Experiment": "debug",
+      "Tissue": "debug",
+      "Organism": "debug",
+      "Target": "",
+      "File_accession": "ENCFF643XFK",
+      "id": "ENCFF643XFK"
+    }
+  ],
+  "repeats": [
+    { "name": "MER125", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER126", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER130", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER135", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER136", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "UCON78", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "UCON8", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "UCON97", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "UCON99", "family": "DNA", "class": "DNA", "size": 7 }
+  ]
+}

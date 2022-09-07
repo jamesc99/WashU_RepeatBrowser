@@ -2,7 +2,7 @@
     <Cell span={12}>
         <div class="welcome-cell">
             <h1>
-                Welcome to WashU Repeat Browsers!
+                Welcome to WashU Repeat Browser!
             </h1>
         </div>
     </Cell>

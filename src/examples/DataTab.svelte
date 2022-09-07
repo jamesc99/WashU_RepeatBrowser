@@ -4,7 +4,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 
-<script>
+<script lang="ts">
     import Modal from '../ui/Modal.svelte';
     import PivotTable from '../components/data-view/PivotTable.svelte';
     import _data from "../json/main.json";
@@ -21,6 +21,7 @@
         SecondaryText
     } from "@smui/list";
     import IconButton from '@smui/icon-button';
+    import LayoutGrid, { Cell } from '@smui/layout-grid';
     import VirtualList from 'svelte-tiny-virtual-list';
 
     import {Cart} from "../stores/CartStore";
@@ -28,6 +29,13 @@
     import defaultData from "../json/default_cart_data.json";
     import {getZarrParameters} from '../api/inputdata';
     import {TabixIndexedFile} from "@gmod/tabix";
+
+    import type, { MenuComponentDev } from '@smui/menu';
+    import Menu from '@smui/menu';
+    import Button from '@smui/button';
+
+    let menu: MenuComponentDev;
+    let clicked = 'nothing yet';
 
     let cartData;
     let cartRepeats;
@@ -40,17 +48,17 @@
         const data_json = await getZarrParameters(zarr_url).then(data => {Cart.addDataItems([data]);});
     }
 
-    let upload_files;
-    $: if (upload_files) {
-        // Note that `files` is of type `FileList`, not an Array:
-        // https://developer.mozilla.org/en-US/docs/Web/API/FileList
-        console.log(upload_files);
-
-        for (const file of upload_files) {
-            console.log(`${file.name}: ${file.size} bytes`);
-            console.log(`${file}`);
-        }
-    }
+    // let upload_files;
+    // $: if (upload_files) {
+    //     // Note that `files` is of type `FileList`, not an Array:
+    //     // https://developer.mozilla.org/en-US/docs/Web/API/FileList
+    //     console.log(upload_files);
+    //
+    //     for (const file of upload_files) {
+    //         console.log(`${file.name}: ${file.size} bytes`);
+    //         console.log(`${file}`);
+    //     }
+    // }
 
     const unsubscribe = Cart.subscribe(async store => {
         const { data, repeats } = store;
@@ -66,47 +74,72 @@
     export let mode;
 </script>
 
-<div>
-    <div style="width:50%; height:auto; float:left; display:inline">
-        <Modal>
-            <PivotTable DATA={_data[mode]}/>
-        </Modal>
-    </div>
+<LayoutGrid>
+    <Cell span={12}>
+        <div class="table-cell">
+            <div style="width:80%; height:auto; float:left; display:inline">
+                <Modal>
+                    <PivotTable DATA={_data[mode]}/>
+                </Modal>
+            </div>
+        </div>
+    </Cell>
 
-    <div class="list" style="width:45%; height:auto; float:right; display:inline">
-        <p>   Data </p>
-        <VirtualList
-                height={100}
-                width="auto"
-                itemCount={cartData.length}
-                itemSize={50}>
-            <div slot="item" let:index let:style {style} class="row">
+    {#each Array(2) as _unused, _i}
+        {#if _i === 0}
+            <Cell span={8}>
+                <div class="demo-cell">
+                    <p> Data: {cartData.length} </p>
+                    <VirtualList
+                            height={200}
+                            width="auto"
+                            itemCount={cartData.length}
+                            itemSize={50}>
 
-
+                        <div slot="item" let:index let:style {style} class="row">
                 <span>
                     <IconButton class="material-icons"
                                 on:click={() => Cart.addDataItems($Cart.data.filter(
                             d => d._id !== cartData[index]._id))}>
                     cancel</IconButton>
-                     Tissue: {cartData[index].Tissue} and Assay: {cartData[index].Assay}
+                    File: {cartData[index].id}
                 </span>
+                        </div>
+                    </VirtualList>
+                </div>
+            </Cell>
+        {/if}
 
+        {#if _i === 1}
+            <Cell span={4}>
+                <div class="demo-cell">
+                    <p> Repeats: {cartRepeats.length} </p>
+                    <VirtualList
+                            height={200}
+                            width="auto"
+                            itemCount={cartRepeats.length}
+                            itemSize={50}>
+                        <div slot="item" let:index class="row">
+                            <Text>{cartRepeats[cartRepeats.length - 1 - index].name}</Text>
+                        </div>
+
+                    </VirtualList>
+                </div>
+            </Cell>
+        {/if}
+    {/each}
+
+    <Cell span={12}>
+        <div class="url-input-cell">
+            <div style="width:80%; height:auto; float:left; display:inline; text-align: center">
+                <input bind:value={tmp_url} placeholder="enter the Zarr URL">
+                <button on:click={setUn}>Upload</button>
             </div>
+        </div>
+    </Cell>
+</LayoutGrid>
 
-        </VirtualList>
 
-        <p> Repeats</p>
-        <VirtualList
-                height={200}
-                width="auto"
-                itemCount={cartRepeats.length}
-                itemSize={50}>
-            <div slot="item" let:index let:style {style} class="row">
-                <Text>{cartRepeats[index].name}</Text>
-            </div>
-
-        </VirtualList>
-    </div>
 
 <!--    <label for="many">Upload multiple files of any type:</label>-->
 <!--    <input-->
@@ -116,16 +149,37 @@
 <!--            type="file"-->
 <!--    />-->
 
-    <div>
-        <input bind:value={tmp_url} placeholder="enter the Zarr URL">
-        <button on:click={setUn}>Upload</button>
-    </div>
 
-
-</div>
 
 
 <style>
+    .table-cell {
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        color: var(--mdc-theme-secondary, #333);
+    }
+
+    .virtual-list-cell {
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        color: var(--mdc-theme-secondary, #333);
+    }
+
+    .url-input-cell {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        color: var(--mdc-theme-secondary, #333);
+    }
+
     IconButton{
         float: right;
     }
@@ -153,7 +207,7 @@
     }
 
     .row {
-        padding: 0 15px;
+        padding: 0 20px;
         border-bottom: 1px solid #eee;
         box-sizing: border-box;
         line-height: 50px;
@@ -179,66 +233,5 @@
         font-size: 18px;
         color: #999;
         font-family: -apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
-    }
-
-    .range {
-        position: relative;
-        top: -1px;
-        display: inline-block;
-        margin-left: 15px;
-        width: 250px;
-    }
-
-    :global(input[type=range]) {
-        -webkit-appearance: none;
-        width: 100%;
-        height: 10px;
-        border-radius: 5px;
-        background: #d7dcdf;
-        outline: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    :global(input[type=range]), :global(input[type=range]) *, :global(input[type=range]:after), :global(input[type=range]:before) {
-        box-sizing: border-box;
-    }
-
-    :global(input[type=range]::-webkit-slider-thumb) {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: #2c3e50;
-        cursor: pointer;
-        transition: background .15s ease-in-out;
-    }
-
-    :global(input[type=range]::-webkit-slider-thumb:hover), :global(input[type=range]:active::-webkit-slider-thumb) {
-        background: #008cff;
-    }
-
-    :global(input[type=range]::-moz-range-thumb) {
-        width: 20px;
-        height: 20px;
-        border: 0;
-        border-radius: 50%;
-        background: #2c3e50;
-        cursor: pointer;
-        transition: background .15s ease-in-out;
-    }
-
-    :global(input[type=range]::-moz-range-thumb:hover), :global(input[type=range]:active::-moz-range-thumb) {
-        background: #008cff;
-    }
-
-    :global(::-moz-range-track) {
-        background: #d7dcdf;
-        border: 0;
-    }
-
-    :global(input::-moz-focus-inner), :global(input::-moz-focus-outer) {
-        border: 0;
     }
 </style>

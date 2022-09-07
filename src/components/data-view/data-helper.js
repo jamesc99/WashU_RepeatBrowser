@@ -3,7 +3,6 @@ export const getFiltered = function (data, cell) {
   let filteredResults = data.filter(item => keys.map(key => item[key] === cell[key]).reduce((acc, cum) => acc && cum))
 
   return filteredResults
-
 }
 
 

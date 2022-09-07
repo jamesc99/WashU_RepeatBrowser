@@ -2,10 +2,14 @@
     import { onMount } from 'svelte';
     import * as d3 from 'd3';
     import VirtualList from 'svelte-tiny-virtual-list';
+    import LayoutGrid, { Cell } from '@smui/layout-grid';
     import {Text} from "@smui/list";
 
     import { Cart } from '../stores/CartStore';
     import REPEATS from '../json/mm10.subfamilies';
+    import Typeahead from "svelte-typeahead";
+
+    let events = [];
     import _flare from '../json/flare.json';
     import _flare2 from '../json/flare-2.json';
     let tooltipNodeRef;
@@ -14,6 +18,10 @@
 
     function handleSelected(input) {
         Cart.addRepeats([...new Set([...$Cart.repeats, ...input.data.children])]);
+    }
+
+    function handleChildSelected(input) {
+        Cart.addRepeats([...new Set([...$Cart.repeats, input.data])]);
     }
 
     function recoverSelected(input) {
@@ -27,7 +35,19 @@
 
             return input_names.indexOf(repeat_name) === -1;
         }));
+    }
 
+    function recoverChildSelected(input) {
+        const selected_array = [input.data];
+        // selected_array.forEach((element) => {
+        //     Cart.addRepeats($Cart.repeats.filter(d => d.name !== element.name));
+        // })
+        Cart.addRepeats($Cart.repeats.filter(r => {
+            let repeat_name = r.name;
+            let input_names = input.data.name;
+
+            return input_names.indexOf(repeat_name) === -1;
+        }));
     }
 
     function Sunburst(data, {format = d3.format(",d"), width = 932,
@@ -72,8 +92,20 @@
             .attr("fill", d => { while (d.depth > 1) d = d.parent; return color(d.data.name); })
             .attr("fill-opacity", d => arcVisible(d.current) ? (d.children ? 0.6 : 0.4) : 0)
             .attr("pointer-events", d => arcVisible(d.current) ? "auto" : "none")
-            .attr("d", d => arc(d.current));
+            .attr("d", d => arc(d.current))
+            .on("click", function (d) {
+                d.noFill = d.noFill || false;
+                if (!d.noFill && !d.parent.noFill) {
+                    handleChildSelected(d);
+                    this.style.fill = "#ccc";
+                } else {
+                    recoverChildSelected(d);
+                    this.style.fill = color(d.parent.parent.data.name);
+                }
+                d.noFill = !d.noFill;
+            });
 
+        let dblclick_timer = false;
         path.filter(d => d.children)
             .style("cursor", "pointer")
             .on("click", function (d) {
@@ -122,7 +154,7 @@
             .attr("transform", d => labelTransform(d.current))
             .text(d => d.data.name);
 
-        let dblclick_timer = false;
+
         const parent = g.append("circle")
             .datum(root)
             .attr("r", radius)
@@ -200,6 +232,7 @@
     const unsubscribe = Cart.subscribe(async store => {
         const { repeats } = store;
         cartRepeats = repeats;
+        console.log(cartRepeats);
     });
 
     onMount(()=>{
@@ -208,20 +241,50 @@
 
 </script>
 
-<div>
-    <svg bind:this="{nodeRef}" width=500px height=500px>    </svg>
 
-    <div style="width:500px; height:auto; float:right; display:inline">
-        <p> Repeats</p>
-        <VirtualList
-                height={200}
-                width = 'auto'
-                itemCount={cartRepeats.length}
-                itemSize={50}>
-            <div slot="item" let:index let:style {style} class="row">
-                <Text>{cartRepeats[index].name}</Text>
-            </div>
-        </VirtualList>
-    </div>
+<style>
+    .row {
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+        box-sizing: border-box;
+        line-height: 50px;
+        font-weight: 500;
+        background: #fff;
+    }
 
-</div>
+</style>
+
+
+<LayoutGrid>
+    <Cell span={8}>
+        <div class="demo-cell">
+            <svg bind:this="{nodeRef}" width=90% height=90%>    </svg>
+        </div>
+    </Cell>
+
+    <Cell span={4}>
+        <div>
+            <h1>#Repeats: {cartRepeats.length}</h1>
+            <VirtualList
+                    height={200}
+                    width = 'auto'
+                    itemCount={cartRepeats.length}
+                    itemSize={50}>
+                <div slot="item" let:index let:style {style} class="row">
+                    <Text> {cartRepeats[cartRepeats.length - 1 - index].name} </Text>
+                </div>
+            </VirtualList>
+
+            <Typeahead
+                    label="Repeats Search"
+                    placeholder={`Search Repeats (e.g. "MER125")`}
+                    data={cartRepeats}
+                    extract={(item) => item.name}
+                    disable={(item) => /MER135/.test(item.name)}
+                    on:select={({ detail }) => events = [...events, detail]}
+                    on:clear={() => events = [...events, "clear"]}
+            />
+        </div>
+    </Cell>
+</LayoutGrid>
+

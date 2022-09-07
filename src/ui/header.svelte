@@ -3,13 +3,15 @@
 </script>
 <header>
     <h1>
+        <img src="./wangLabLogo.png" alt="" class="lablogo">
         <img src="./images/School_of_Medicine.svg" alt="">
+        <img src="./wangLabLogo.png" alt="" class="lablogo">
     </h1>
 </header>
 
 <style>
     header{
-        background: #f7f7f7;
+        background: #fff;
         padding: 10px;
     }
     h1{
@@ -20,4 +22,9 @@
         max-width: 60%;
         text-align: center;
     }
+
+    .lablogo{
+        width: 5%;
+    }
+
 </style>
