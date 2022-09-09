@@ -62,7 +62,6 @@
           .on("click", function(d) {
               handleGenomeClick(data);
           })
-
      createChromosomeBody();
   });
 
@@ -110,7 +109,7 @@
                 }
             })
 
-            .on("mouseover", function(event, d) {
+            .on("mouseover", function(d) {
                 d3.select(this)
                     .attr("width", 5)
                     .attr("height", 35);
@@ -120,10 +119,9 @@
                     .duration(100)		
                     .style("opacity", 1);
                 // div.html("Position : <strong>" + d.start + "</strong><br/>" + "Score : <strong>" + d.RPKM.toFixed(2)) + "</strong>"
-                div.html(`<span style='font-size: 12px;'>Position: ${d.start}<br/>Score: ${d.RPKM.toFixed(2)}</span>`)
-                    .style("left", (event.pageX + 25) + "px")
-                    .style("top", (event.pageY - 28) + "px");
-
+                div.html(`<span style='font-size: 10px;'>Position: ${d.start}<br/>Length: ${d.end - d.start}<br/>Score: ${d.RPKM.toFixed(2)}</span>`)
+                    .style("left", (d3.event.pageX + 25) + "px")
+                    .style("top", (d3.event.pageY - 28) + "px");
                 })					
             .on("mouseout", function(d) {	
                 d3.select(this)

@@ -7,7 +7,7 @@
         Subtitle,
         Scrim,
     } from '@smui/drawer';
-    import Button, { Label } from '@smui/button';
+    import Button, { Label, Icon } from '@smui/button';
     import List, { Item, Text, Graphic, Separator, Subheader } from '@smui/list';
     import LayoutGrid, { Cell } from '@smui/layout-grid';
     import PlotlyHeatmapContainer from "../examples/PlotlyHeatmapContainer.svelte";
@@ -85,7 +85,7 @@
     <Drawer variant="modal" fixed={false} bind:open>
         <Header>
             <Title>Repeat Browser</Title>
-            <Subtitle>It's the best repeat browser!</Subtitle>
+            <Subtitle>Browse WashU repeat browser!</Subtitle>
         </Header>
         <Content>
             <List>
@@ -191,11 +191,10 @@
     <AppContent class="app-content">
         <main class="main-content">
             <Button on:click={() => (open = !open)}>
-                <Label>Toggle Drawer</Label>
+                <Label>Menu</Label>
             </Button>
             <br />
             {#if active === "Files Selection"}
-                <h2>File Select</h2>
                 <DataTab {mode}/>
 <!--                <LayoutGrid>-->
 <!--                    <Cell span={2}>-->
@@ -276,16 +275,34 @@
                 </div>
             {:else if active === "Repeats Selection"}
                 <div class="demo-cell">
-                    <h2>Repeat select</h2>
+                    <h3>Repeat Selection</h3>
                     <Zoom_Sunburst/>
                 </div>
             {:else if active === "Data View"}
                 <CartComponent />
             {:else if active === "Consensus View"}
                 <ConsensusContainer {combination} />
+                <Button style="display: inline; margin-right: 76%;" on:click={() => {active = "Heatmap"}} touch variant="unelevated">
+                    <Icon class="material-icons">arrow_back</Icon>
+                    <Label>Heatmap</Label>
+                </Button>
+
+                <Button style="display: inline;" on:click={() => {active = "Genome View"}} touch variant="unelevated">
+                    <Label>Genome View</Label>
+                    <Icon class="material-icons">arrow_forward</Icon>
+                </Button>
             {:else if active === "Genome View"}
                 <Modal>
-                    <GenomeViewContainer {combination} />
+                    <GenomeViewContainer {combination} style="margin-bottom: 5%"/>
+                    <Button style="display: inline; margin-right: 76%;" on:click={() => {active = "Heatmap"}} touch variant="unelevated">
+                        <Icon class="material-icons">arrow_back</Icon>
+                        <Label>Heatmap</Label>
+                    </Button>
+
+                    <Button style="display: inline" on:click={() => {active = "Consensus View"}} touch variant="unelevated">
+                        <Label>Consensus View</Label>
+                        <Icon class="material-icons">arrow_forward</Icon>
+                    </Button>
                 </Modal>
             {/if}
 
@@ -302,7 +319,7 @@
     .drawer-container {
         position: relative;
         display: flex;
-        height: 700px;
+        /*height: 700px;*/
         max-width: 100%;
         /*border: 1px solid*/
         /*var(--mdc-theme-text-hint-on-background, rgba(0, 0, 0, 0.1));*/

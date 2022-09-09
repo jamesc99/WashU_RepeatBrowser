@@ -21,6 +21,8 @@
         SecondaryText
     } from "@smui/list";
     import IconButton from '@smui/icon-button';
+    import { Button, Dialog, MaterialApp } from 'svelte-materialify';
+    import Button, { Label } from '@smui/button';
     import LayoutGrid, { Cell } from '@smui/layout-grid';
     import VirtualList from 'svelte-tiny-virtual-list';
 
@@ -36,16 +38,25 @@
 
     let menu: MenuComponentDev;
     let clicked = 'nothing yet';
+    let upload_active = false;
 
     let cartData;
     let cartRepeats;
 
-
     let tmp_url;
     let zarr_url;
+
+    function handleClick(data) {
+        alert(`${data.id} (${data.Assay}) uploaded.`)
+    }
+
     async function setUn() {
         zarr_url = tmp_url;
-        const data_json = await getZarrParameters(zarr_url).then(data => {Cart.addDataItems([data]);});
+        const data_json = await getZarrParameters(zarr_url).then(data => {
+            handleClick(data);
+            console.log(data);
+            Cart.addDataItems([data]);
+        });
     }
 
     // let upload_files;
@@ -76,67 +87,70 @@
 
 <LayoutGrid>
     <Cell span={12}>
+        <h3 style="color: var(--mdc-theme-secondary, #333);margin-left: 10%">Zarr File Uploading: </h3>
+        <div class="url-input-cell">
+            <div style="width:80%; height:auto; float:left; display:inline; text-align: center">
+                <input bind:value={tmp_url} placeholder="Enter the Zarr URL">
+                <button on:click={setUn}>Upload</button>
+            </div>
+        </div>
+        <hr>
+    </Cell>
+
+    <Cell span={12}>
         <div class="table-cell">
             <div style="width:80%; height:auto; float:left; display:inline">
                 <Modal>
+                    <h3>File Selection: </h3>
                     <PivotTable DATA={_data[mode]}/>
                 </Modal>
             </div>
         </div>
     </Cell>
 
-    {#each Array(2) as _unused, _i}
-        {#if _i === 0}
-            <Cell span={8}>
-                <div class="demo-cell">
-                    <p> Data: {cartData.length} </p>
-                    <VirtualList
-                            height={200}
-                            width="auto"
-                            itemCount={cartData.length}
-                            itemSize={50}>
+<!--    {#each Array(2) as _unused, _i}-->
+<!--        {#if _i === 0}-->
+<!--            <Cell span={8}>-->
+<!--                <div class="demo-cell">-->
+<!--                    <p> Data: {cartData.length} </p>-->
+<!--                    <VirtualList-->
+<!--                            height={200}-->
+<!--                            width="auto"-->
+<!--                            itemCount={cartData.length}-->
+<!--                            itemSize={50}>-->
 
-                        <div slot="item" let:index let:style {style} class="row">
-                <span>
-                    <IconButton class="material-icons"
-                                on:click={() => Cart.addDataItems($Cart.data.filter(
-                            d => d._id !== cartData[index]._id))}>
-                    cancel</IconButton>
-                    File: {cartData[index].id}
-                </span>
-                        </div>
-                    </VirtualList>
-                </div>
-            </Cell>
-        {/if}
+<!--                        <div slot="item" let:index let:style {style} class="row">-->
+<!--                <span>-->
+<!--                    <IconButton class="material-icons"-->
+<!--                                on:click={() => Cart.addDataItems($Cart.data.filter(-->
+<!--                            d => d._id !== cartData[index]._id))}>-->
+<!--                    cancel</IconButton>-->
+<!--                    File: {cartData[index].id}-->
+<!--                </span>-->
+<!--                        </div>-->
+<!--                    </VirtualList>-->
+<!--                </div>-->
+<!--            </Cell>-->
+<!--        {/if}-->
 
-        {#if _i === 1}
-            <Cell span={4}>
-                <div class="demo-cell">
-                    <p> Repeats: {cartRepeats.length} </p>
-                    <VirtualList
-                            height={200}
-                            width="auto"
-                            itemCount={cartRepeats.length}
-                            itemSize={50}>
-                        <div slot="item" let:index class="row">
-                            <Text>{cartRepeats[cartRepeats.length - 1 - index].name}</Text>
-                        </div>
+<!--        {#if _i === 1}-->
+<!--            <Cell span={4}>-->
+<!--                <div class="demo-cell">-->
+<!--                    <p> Repeats: {cartRepeats.length} </p>-->
+<!--                    <VirtualList-->
+<!--                            height={200}-->
+<!--                            width="auto"-->
+<!--                            itemCount={cartRepeats.length}-->
+<!--                            itemSize={50}>-->
+<!--                        <div slot="item" let:index class="row">-->
+<!--                            <Text>{cartRepeats[cartRepeats.length - 1 - index].name}</Text>-->
+<!--                        </div>-->
 
-                    </VirtualList>
-                </div>
-            </Cell>
-        {/if}
-    {/each}
-
-    <Cell span={12}>
-        <div class="url-input-cell">
-            <div style="width:80%; height:auto; float:left; display:inline; text-align: center">
-                <input bind:value={tmp_url} placeholder="enter the Zarr URL">
-                <button on:click={setUn}>Upload</button>
-            </div>
-        </div>
-    </Cell>
+<!--                    </VirtualList>-->
+<!--                </div>-->
+<!--            </Cell>-->
+<!--        {/if}-->
+<!--    {/each}-->
 </LayoutGrid>
 
 
@@ -154,7 +168,7 @@
 
 <style>
     .table-cell {
-        height: 500px;
+        height: 550px;
         display: flex;
         justify-content: center;
         align-items: center;

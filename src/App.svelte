@@ -34,7 +34,8 @@
   import Modal from './ui/Modal.svelte';
   import _data from "./json/main.json";
   // import defaultData from './json/default_cart_data.json';
-  import defaultData from './json/zarr_default_data.json';
+  // import defaultData from './json/zarr_default_data.json';
+  import defaultData from './json/zarr_data_0908.json';
   import DataTable from './examples/DataTab.svelte'
   import { TabContent, TabPane } from 'sveltestrap';
 
@@ -165,9 +166,9 @@
     background-color: #fff;
   }
 
-  .demo-cell{
-    background-color: #fff;
-  }
+  /*.demo-cell{*/
+  /*  background-color: #fff;*/
+  /*}*/
 
   Modal {
     width: 80%;
@@ -231,6 +232,7 @@
       </Label>
     </Tab>
   </TabBar>
+  <hr>
 
   <div class="main-body">
     {#if keyedTabsActive.k === 0}

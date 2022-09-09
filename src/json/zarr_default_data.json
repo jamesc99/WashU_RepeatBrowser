@@ -64,6 +64,39 @@
       "Target": "",
       "File_accession": "ENCFF643XFK",
       "id": "ENCFF643XFK"
+    },
+    {
+      "Zarr": "http://regmedsrv1.wustl.edu/Public_SPACE/ryan/Public_html/repeat_browser/second_round_0906/step3_ENCFF005BHD_DNase_dm6_se_36.zarr",
+      "Assay": "DNase-seq",
+      "Biosample_type": "S2",
+      "Experiment": "DNA_accessibility",
+      "Tissue": "Unknown",
+      "Organism": "debug",
+      "Target": "",
+      "File_accession": "ENCFF005BHD",
+      "id": "ENCFF005BHD"
+    },
+    {
+      "Zarr": "http://regmedsrv1.wustl.edu/Public_SPACE/ryan/Public_html/repeat_browser/second_round_0906/step3_ENCFF099MUT_dm6_se_50.zarr",
+      "Assay": "Chip-seq",
+      "Biosample_type": "whole_organism",
+      "Experiment": "DNA_binding",
+      "Tissue": "Unknown",
+      "Organism": "debug",
+      "Target": "",
+      "File_accession": "ENCFF099MUT",
+      "id": "ENCFF099MUT"
+    },
+    {
+      "Zarr": "http://regmedsrv1.wustl.edu/Public_SPACE/ryan/Public_html/repeat_browser/second_round_0906/step3_ENCFF130ONT_chipseq_hg38_se_76.zarr",
+      "Assay": "Chip-seq",
+      "Biosample_type": "CTCF",
+      "Experiment": "debug",
+      "Tissue": "Unknown",
+      "Organism": "debug",
+      "Target": "",
+      "File_accession": "ENCFF130ONT",
+      "id": "ENCFF130ONT"
     }
   ],
   "repeats": [

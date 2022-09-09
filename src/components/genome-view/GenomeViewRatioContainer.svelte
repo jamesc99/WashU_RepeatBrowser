@@ -91,7 +91,6 @@
       loaded = false;
     }
   }
-
 </script>
 
 {#if sessionFile !== undefined}

@@ -1,0 +1,135 @@
+{
+  "data": [{
+    "Zarr": "https://wangftp.wustl.edu/~scheng/repeat_browser/data_hub/mm10/chipseq/ENCFF001KDQ.zarr",
+    "Assay": "Chip-seq",
+    "Biosample_type": "ES_Bruce4",
+    "Experiment": "ENCSR000CFZ",
+    "Tissue": "unknown",
+    "Organism": "unknown",
+    "Target": "",
+    "File_accession": "ENCFF001KDQ",
+    "id": "ENCFF001KDQ"
+  },
+    {
+      "Zarr": "https://wangftp.wustl.edu/~scheng/repeat_browser/data_hub/mm10/chipseq/ENCFF001KEF.zarr",
+      "Assay": "ChIP-seq",
+      "Biosample_type": "ES_Bruce4",
+      "Experiment": "ENCSR000CBF",
+      "Tissue": "unknown",
+      "Organism": "unknown",
+      "Target": "",
+      "File_accession": "ENCFF001KEF",
+      "id": "ENCFF001KEF"
+    },
+    {
+      "Zarr": "https://wangftp.wustl.edu/~scheng/repeat_browser/data_hub/mm10/chipseq/ENCFF001KER.zarr",
+      "Assay": "ChIP-seq",
+      "Biosample_type": "ES_Bruce4",
+      "Experiment": "ENCSR000CBF",
+      "Tissue": "unknown",
+      "Organism": "unknown",
+      "Target": "",
+      "File_accession": "ENCFF001KER",
+      "id": "ENCFF001KER"
+    },
+    {
+      "Zarr": "https://wangftp.wustl.edu/~scheng/repeat_browser/data_hub/mm10/chipseq/ENCFF097ZHF.zarr",
+      "Assay": "ChIP-seq",
+      "Biosample_type": "tissue",
+      "Experiment": "ENCSR823KBU",
+      "Tissue": "heart",
+      "Organism": "unknown",
+      "Target": "",
+      "File_accession": "ENCFF097ZHF",
+      "id": "ENCFF097ZHF"
+    },
+    {
+      "Zarr": "https://wangftp.wustl.edu/~scheng/repeat_browser/data_hub/mm10/chipseq/ENCFF334RGO.zarr",
+      "Assay": "ChIP-seq",
+      "Biosample_type": "tissue",
+      "Experiment": "ENCSR864KGR",
+      "Tissue": "heart",
+      "Organism": "unknown",
+      "Target": "",
+      "File_accession": "ENCFF334RGO",
+      "id": "ENCFF334RGO"
+    },
+    {
+      "Zarr": "https://wangftp.wustl.edu/~scheng/repeat_browser/data_hub/mm10/rnaseq/ENCFF236TUH.zarr",
+      "Assay": "RNA-seq",
+      "Biosample_type": "tissue",
+      "Experiment": "ENCSR967IKT",
+      "Tissue": "heart",
+      "Organism": "unkonwn",
+      "Target": "",
+      "File_accession": "ENCFF236TUH",
+      "id": "ENCFF236TUH"
+    },
+    {
+      "Zarr": "https://wangftp.wustl.edu/~scheng/repeat_browser/data_hub/mm10/rnaseq/ENCFF344ASD.zarr",
+      "Assay": "RNA-seq",
+      "Biosample_type": "dendritic_cell",
+      "Experiment": "ENCSR867RTO",
+      "Tissue": "unkonwn",
+      "Organism": "unkonwn",
+      "Target": "",
+      "File_accession": "ENCFF344ASD_ENCFF023BWO",
+      "id": "ENCFF344ASD_ENCFF023BWO"
+    },
+    {
+      "Zarr": "https://wangftp.wustl.edu/~scheng/repeat_browser/data_hub/mm10/rnaseq/ENCFF467LJD.zarr",
+      "Assay": "RNA-seq",
+      "Biosample_type": "tissue",
+      "Experiment": "ENCSR584OSM",
+      "Tissue": "heart",
+      "Organism": "unkonwn",
+      "Target": "",
+      "File_accession": "ENCFF467LJD",
+      "id": "ENCFF467LJD"
+    },
+    {
+      "Zarr": "https://wangftp.wustl.edu/~scheng/repeat_browser/data_hub/mm10/rnaseq/ENCFF804UQS.zarr",
+      "Assay": "RNA-seq",
+      "Biosample_type": "tissue",
+      "Experiment": "ENCSR967IKT",
+      "Tissue": "heart",
+      "Organism": "unkonwn",
+      "Target": "",
+      "File_accession": "ENCFF804UQS",
+      "id": "ENCFF804UQS"
+    },
+    {
+      "Zarr": "https://wangftp.wustl.edu/~scheng/repeat_browser/data_hub/mm10/rnaseq/ENCFF804UQS.zarr",
+      "Assay": "RNA-seq",
+      "Biosample_type": "dendritic_cell",
+      "Experiment": "ENCSR602ODY",
+      "Tissue": "unkonwn",
+      "Organism": "unkonwn",
+      "Target": "",
+      "File_accession": "ENCFF880YQH_ENCFF275LAE",
+      "id": "ENCFF880YQH_ENCFF275LAE"
+    },
+    {
+      "Zarr": "http://regmedsrv1.wustl.edu/Public_SPACE/ryan/Public_html/repeat_browser/second_round_0906/step3_ENCFF130ONT_chipseq_hg38_se_76.zarr",
+      "Assay": "Chip-seq",
+      "Biosample_type": "CTCF",
+      "Experiment": "debug",
+      "Tissue": "Unknown",
+      "Organism": "debug",
+      "Target": "",
+      "File_accession": "ENCFF130ONT",
+      "id": "ENCFF130ONT"
+    }
+  ],
+  "repeats": [
+    { "name": "MER125", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER126", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER130", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER135", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER136", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "UCON8", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "L1M2b", "family": "L1", "class": "LINE", "size": 7},
+    { "name": "L1ME1", "family": "L1", "class": "LINE", "size": 7},
+    { "name": "L1ME2", "family": "L1", "class": "LINE", "size": 7}
+  ]
+}

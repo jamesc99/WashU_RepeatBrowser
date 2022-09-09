@@ -32,7 +32,7 @@
         // Add X axis
         var x = d3.scaleLinear()
             .domain([0, 4e7])
-            .range([ 0, width]);
+            .range([0, width]);
         let axis_x = d3.axisBottom(x);
         axis_x.ticks(5);
         var xAxis = SVG.append("g")
@@ -86,14 +86,14 @@
             .attr("y", function (d) { return y(d.RPKM); } )
             .attr("width", function(d){return Math.max(5, x(d.end) - x(d.start))})
             .attr("height", 10)
-            .style("fill", "#61a3a9")
+            .style("fill", "#ff0000")
             .style("opacity", 0.5);
 
         // Set the zoom and Pan features: how much you can zoom, on which part, and what to do when there is a zoom
         var zoom = d3.zoom()
             .scaleExtent([.1, 100])  // This control how much you can unzoom (x0.5) and zoom (x20)
             .extent([[0, 0], [width, height]])
-            .on("zoom", function(event, d){updateChart(event)});
+            .on("zoom", updateChart);
 
         // This add an invisible rect on top of the chart area. This rect can recover pointer events: necessary to understand when the user zoom
         SVG.append("rect")
@@ -106,10 +106,11 @@
         // now the user can zoom and it will trigger the function called updateChart
 
         // A function that updates the chart when the user zoom and thus new boundaries are available
-        function updateChart(event) {
+        function updateChart() {
             // recover the new scale
-            var newX = event.transform.rescaleX(x);
-            var newY = event.transform.rescaleY(y);
+            var newX = d3.event.transform.rescaleX(x);
+            var newY = d3.event.transform.rescaleY(y);
+            console.log(newX);
             let newaxis_x = d3.axisBottom(newX);
             newaxis_x.ticks(5);
             // update axes with these new boundaries
@@ -121,7 +122,7 @@
                 .selectAll("rect")
                 .attr('x', function(d) {return newX(d.start)})
                 .attr('y', function(d) {return newY(d.RPKM)})
-                .attr("width", function(d){ return Math.max(10,newX(d.end) - newX(d.start))})
+                .attr("width", function(d){ return Math.max(3,newX(d.end) - newX(d.start))})
                 .attr("height", 10);
         }
 

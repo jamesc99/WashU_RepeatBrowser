@@ -15,7 +15,8 @@
   let dataLabels;
   export let propsData;
   export let repeatLabels;
-  let TYPE = 'all';
+  export let TYPE;
+  // let TYPE='all';
   const dispatch = createEventDispatcher();
   // const unsubscribe = Cart.subscribe(async store => {
   //   const { repeats, data } = store;
