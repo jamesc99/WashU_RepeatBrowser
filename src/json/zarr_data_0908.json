@@ -119,6 +119,18 @@
       "Target": "",
       "File_accession": "ENCFF130ONT",
       "id": "ENCFF130ONT"
+    },
+    {
+      "Zarr": "http://127.0.0.1:8081/Experiment.zarr",
+      "Mode": "Experiment",
+      "Assay": "Chip-seq",
+      "Biosample_type": "Experiment",
+      "Experiment": "debug",
+      "Tissue": "Unknown",
+      "Organism": "debug",
+      "Target": "",
+      "File_accession": "Experiment",
+      "id": "Experiment"
     }
   ],
   "repeats": [

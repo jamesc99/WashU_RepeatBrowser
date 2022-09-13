@@ -15,6 +15,7 @@
   let dataLabels;
   export let propsData;
   export let repeatLabels;
+  export let scaleMax;
   export let TYPE;
   // let TYPE='all';
   const dispatch = createEventDispatcher();
@@ -30,26 +31,34 @@
     onlyData = extractRequiredDataPoints(propsData, repeatLabels, TYPE);
     console.log(propsData);
     if (onlyData !== undefined) {
-      drawHeatMap(onlyData, repeatLabels, dataLabels);
+      drawHeatMap(onlyData, repeatLabels, dataLabels, scaleMax);
     }
   })
 
   afterUpdate(() => {
-      // if (onlyData !== undefined) {
-      //   drawHeatMap(onlyData, repeatNames, dataNames);
-      // }
+      if (onlyData !== undefined) {
+        drawHeatMap(onlyData, repeatLabels, dataLabels, scaleMax);
+      }
   });
 
   // onDestroy(unsubscribe);
 
-  function drawHeatMap(z, repeatLabels, dataLabels) {
+  function drawHeatMap(z, repeatLabels, dataLabels, scale_max) {
+    console.log(z);
     let myPlot = document.getElementById('myDiv');
+    const zMax = Math.max(...[].concat(...z));
+
     const data = [
     {
       z: z,
       x: repeatLabels,
       y: dataLabels,
-      type: 'heatmap'
+      type: 'heatmap',
+      // colorscale: colorscaleValue,
+      showscale: true,
+      zauto: zMax > scale_max ? false : true,
+      zmax: zMax > scale_max ? scaleMax : zMax,
+      zmin: 0
     }
     ];
 

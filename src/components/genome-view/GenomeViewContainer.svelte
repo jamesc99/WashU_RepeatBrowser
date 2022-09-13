@@ -50,6 +50,7 @@
     UUID = uuid.v4(); 
 
     const { data, repeat } = combination;
+    const dataFile = $Cart.data.filter(file => file.File_accession === data);
     // console.log(data, repeat);
     // fetch(`${DATAHUB_MONGO_API}/${experiment}-${subfam}`) // pre-saved data from MONGO
     // .then(res => {
@@ -70,13 +71,9 @@
     //   });
     // const URL = $Cart.data.filter(file => file.File_accession === data)[0].subfamLoci;
 
-    // For debug use
-    const debug = debug_data.files;
-    const zarr_url = debug[0].Zarr;
-
     try {
       // dataToRender = await fetchRPKMTabixChrAll(data, repeat, URL);
-      dataToRender = await getZarrLoci(repeat, zarr_url);
+      dataToRender = await getZarrLoci(repeat, dataFile);
       console.log(dataToRender);
       loaded = true;
       let result = [];

@@ -148,7 +148,9 @@ export const fetchConsensusDataAll = async function(experiment, subfam, FILES) {
 export const fetchConsensusDatabyZarr = async function (FILE, subfam) {
     const zarr_url = FILE[0].Zarr;
     const fileId = FILE[0].id;
-    // const FILE = DATA.files.filter(file => file.File_accession === dataId);
+    const mode = FILE[0].Mode;
+    let return_value;
+        // const FILE = DATA.files.filter(file => file.File_accession === dataId);
     // const FILE = $Cart.data.filter(file => file.File_accession === dataId);
     // console.log(FILE);
     // const optionsBigWig = {
@@ -176,14 +178,33 @@ export const fetchConsensusDatabyZarr = async function (FILE, subfam) {
     // const { chr, min, max } = optionsBigWig.params;
     // let allPromise = dataSource_all.getData(chr, min, max);
     // let uniquePromise = dataSource_unique.getData(chr, min, max);
+    if (mode === 'Experiment'){
+        let signal_allPromise = getZarrWig('signal_all_bigwig', subfam, zarr_url);
+        let signal_uniquePromise = getZarrWig('signal_uni_bigwig', subfam, zarr_url);
 
-    let allPromise = getZarrWig('all_bigwig', subfam, zarr_url);
-    let uniquePromise = getZarrWig('uni_bigwig', subfam, zarr_url);
+        let control_allPromise = getZarrWig('control_all_bigwig', subfam, zarr_url);
+        let control_uniquePromise = getZarrWig('control_uni_bigwig', subfam, zarr_url);
 
-    let combined = await Promise.all([allPromise, uniquePromise])
-    const [all, unique] = combined;
+        let signal_combined = await Promise.all([signal_allPromise, signal_uniquePromise])
+        let control_combined = await Promise.all([control_allPromise, control_uniquePromise])
 
-    return { fileId, all, unique };
+        const [signal_all, signal_unique] = signal_combined;
+        const [control_all, control_unique] = control_combined;
+        console.log(signal_all);
+
+        return_value = [{"fileId": fileId + "_signal", "all": signal_all, "unique": signal_unique},
+                        {"fileId": fileId + "_control", "all": control_all, "unique": control_unique}];
+    } else {
+        let allPromise = getZarrWig('all_bigwig', subfam, zarr_url);
+        let uniquePromise = getZarrWig('uni_bigwig', subfam, zarr_url);
+
+        let combined = await Promise.all([allPromise, uniquePromise])
+        const [all, unique] = combined;
+        return_value = [{fileId, all, unique}];
+    }
+
+    return return_value;
+    // return [{fileId, all, unique}];
     // let toRespond = consolidate(combined)
     // let maxValue = calcMaxValue(combined)
 
@@ -207,6 +228,26 @@ async function getZarrWig(wig_type, subfam, zarr_url){
         case 'uni_bigwig':
             chunk_id = [0, 0];
             wig_zatrr = 'uni_wig';
+            break;
+
+        case 'signal_all_bigwig':
+            chunk_id = [0, 0];
+            wig_zatrr = 'signal_all_wig';
+            break;
+
+        case 'signal_uni_bigwig':
+            chunk_id = [0, 0];
+            wig_zatrr = 'signal_uni_wig';
+            break;
+
+        case 'control_all_bigwig':
+            chunk_id = [0, 0];
+            wig_zatrr = 'control_all_wig';
+            break;
+
+        case 'control_uni_bigwig':
+            chunk_id = [0, 0];
+            wig_zatrr = 'control_uni_wig';
             break;
     }
 

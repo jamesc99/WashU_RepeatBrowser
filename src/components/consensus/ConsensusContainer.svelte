@@ -7,7 +7,8 @@
   import { Cart } from '../../stores/CartStore';
   let loaded = false;
   let error = undefined;
-  let consensusData = undefined;
+  // let consensusData = undefined;
+  let consensusData_list = [];
   export let combination;
 
 
@@ -18,10 +19,11 @@
     const dataFile = $Cart.data.filter(file => file.File_accession === data);
     try {
       // const res = await fetchConsensusData(dataFile, repeat);
-      const debug_file = debug_data.files;
-      const res = await fetchConsensusDatabyZarr(debug_file, repeat);
-      console.log(res)
-      consensusData = res;
+      // const debug_file = debug_data.files;
+      console.log(dataFile);
+      const res = await fetchConsensusDatabyZarr(dataFile, repeat);
+      console.log(res);
+      consensusData_list = res;
       loaded = true;
     } catch (error) {
       console.log(error);
@@ -32,7 +34,9 @@
 </script>
 
 {#if loaded}
-  <PlotlyAreaChart consensusData={[consensusData.all, consensusData.unique]} data={combination.data} repeat={combination.repeat} index={0} />
+  {#each consensusData_list as consensusData, index}
+    <PlotlyAreaChart consensusData={[consensusData.all, consensusData.unique]} data={consensusData.fileId} repeat={combination.repeat} {index}/>
+  {/each}
 {:else if error !== undefined}
   <p>{error}</p>
 {:else}

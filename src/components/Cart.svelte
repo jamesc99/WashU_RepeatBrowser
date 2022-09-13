@@ -44,6 +44,7 @@
     const { data, repeats } = store;
     cartData = data;
     cartRepeats = repeats;
+    console.log(cartRepeats);
   });
 
   onDestroy(() => {
@@ -178,7 +179,7 @@
   {#if _i === 0}
     <Cell span={6}>
       <div class="demo-cell">
-        <p> Data: {cartData.length} </p>
+        <span style="margin-left: 2em"> Data: {cartData.length} </span>
         <VirtualList
                 height={200}
                 width="auto"
@@ -189,7 +190,7 @@
                 <span>
                     <IconButton class="material-icons"
                                 on:click={() => Cart.addDataItems($Cart.data.filter(
-                            d => d._id !== cartData[index]._id))}>
+                            d => d.id !== cartData[index].id))}>
                     cancel</IconButton>
                     File: {cartData[index].id}
                 </span>
@@ -202,16 +203,22 @@
   {#if _i === 1}
     <Cell span={6}>
       <div class="demo-cell">
-        <p> Repeats: {cartRepeats.length} </p>
+        <span style="margin-left: 2em"> Repeats: {cartRepeats.length} </span>
         <VirtualList
                 height={200}
                 width="auto"
                 itemCount={cartRepeats.length}
                 itemSize={50}>
-          <div slot="item" let:index class="row">
-            <Text>{cartRepeats[cartRepeats.length - 1 - index].name}</Text>
+          <div slot="item" let:index let:style {style} class="row">
+            <span>
+                <IconButton class="material-icons"
+                            on:click={() =>
+                            Cart.addRepeats($Cart.repeats.filter(d => d.name !== cartRepeats[cartRepeats.length - 1 - index].name))}>
+                cancel</IconButton>
+                Subfamilies: {cartRepeats[cartRepeats.length - 1 - index].name}
+            </span>
+<!--            <Text>{cartRepeats[cartRepeats.length - 1 - index].name}</Text>-->
           </div>
-
         </VirtualList>
       </div>
     </Cell>

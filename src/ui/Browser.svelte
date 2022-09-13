@@ -294,7 +294,7 @@
             {:else if active === "Genome View"}
                 <Modal>
                     <GenomeViewContainer {combination} style="margin-bottom: 5%"/>
-                    <Button style="display: inline; margin-right: 76%;" on:click={() => {active = "Heatmap"}} touch variant="unelevated">
+                    <Button style="display: inline; margin-right: 74%;" on:click={() => {active = "Heatmap"}} touch variant="unelevated">
                         <Icon class="material-icons">arrow_back</Icon>
                         <Label>Heatmap</Label>
                     </Button>
@@ -308,7 +308,7 @@
 
             <pre class="status">Active: {active}</pre>
             <div style="height: 700px;">&nbsp;</div>
-            And some stuff at the bottom.
+<!--            And some stuff at the bottom.-->
         </main>
     </AppContent>
 </div>

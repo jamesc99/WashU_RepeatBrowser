@@ -3,6 +3,7 @@
     import * as d3 from 'd3';
     import VirtualList from 'svelte-tiny-virtual-list';
     import LayoutGrid, { Cell } from '@smui/layout-grid';
+    import IconButton from '@smui/icon-button';
     import {Text} from "@smui/list";
 
     import { Cart } from '../stores/CartStore';
@@ -15,6 +16,21 @@
     let tooltipNodeRef;
     let uniqueRepeats;
     let nodeRef;
+
+    let repeat_list = [];
+    function treeTolist(Tree){
+        let list = [];
+        let temp_list = [...REPEATS.children];
+        let temp_list2 = temp_list.map(x => [...x.children]);
+        temp_list2.forEach(value_array => {
+            value_array.forEach(value => {
+                list.push(...value.children)
+                }
+            )
+        } );
+        return list
+    }
+    const REPEAT_list = treeTolist(REPEATS);
 
     function handleSelected(input) {
         Cart.addRepeats([...new Set([...$Cart.repeats, ...input.data.children])]);
@@ -265,23 +281,41 @@
     <Cell span={4}>
         <div>
             <h1>#Repeats: {cartRepeats.length}</h1>
+<!--            <VirtualList-->
+<!--                    height={200}-->
+<!--                    width = 'auto'-->
+<!--                    itemCount={cartRepeats.length}-->
+<!--                    itemSize={50}>-->
+<!--                <div slot="item" let:index let:style {style} class="row">-->
+<!--                    <Text> {cartRepeats[cartRepeats.length - 1 - index].name} </Text>-->
+<!--                </div>-->
+<!--            </VirtualList>-->
             <VirtualList
                     height={200}
-                    width = 'auto'
+                    width="auto"
                     itemCount={cartRepeats.length}
                     itemSize={50}>
                 <div slot="item" let:index let:style {style} class="row">
-                    <Text> {cartRepeats[cartRepeats.length - 1 - index].name} </Text>
+            <span>
+                <IconButton class="material-icons"
+                            on:click={() =>
+                            Cart.addRepeats($Cart.repeats.filter(d => d.name !== cartRepeats[cartRepeats.length - 1 - index].name))}>
+                cancel</IconButton>
+                Subfamilies: {cartRepeats[cartRepeats.length - 1 - index].name}
+            </span>
+                    <!--            <Text>{cartRepeats[cartRepeats.length - 1 - index].name}</Text>-->
                 </div>
             </VirtualList>
 
             <Typeahead
                     label="Repeats Search"
                     placeholder={`Search Repeats (e.g. "MER125")`}
-                    data={cartRepeats}
+                    data={REPEAT_list}
                     extract={(item) => item.name}
-                    disable={(item) => /MER135/.test(item.name)}
-                    on:select={({ detail }) => events = [...events, detail]}
+                    on:select={({ detail }) => {
+                        console.log(detail);
+                        Cart.addRepeats([...new Set([...$Cart.repeats, detail.original])]);
+                    }}
                     on:clear={() => events = [...events, "clear"]}
             />
         </div>

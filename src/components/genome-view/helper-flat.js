@@ -43,12 +43,22 @@ function nestByChr(parsedInput) {
   return nestedByChr;
 }
 
-export async function getZarrLoci(subfam, zarr_url){
+export async function getZarrLoci(subfam, FILE){
+    const zarr_url = FILE[0].Zarr;
+    const fileId = FILE[0].id;
+    const mode = FILE[0].Mode;
+
+    let loci_tile;
+    if (mode === 'Experiment'){
+        loci_tile = 'signal_loci';
+    }else {
+        loci_tile = 'loci';
+    }
+
     let loci_promise = new Promise((resolve) => {
         zarrRemote.openGroup(zarr_url, (err, group, metadata) => {
-            group[`loci_${subfam}`]([0], function(err, array){
+            group[`${loci_tile}_${subfam}`]([0], function(err, array){
                 const raw_data = array.data;
-
                 let chro_dict = {};
                 for(let i = 0; i < raw_data.length; i=i+4){
                     let chrome = raw_data[i];

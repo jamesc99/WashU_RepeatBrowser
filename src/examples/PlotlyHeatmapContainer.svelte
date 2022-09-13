@@ -15,6 +15,7 @@
   let menu: MenuComponentDev;
   let clicked = 'DNA';
   let checked = false;
+  let scale_max = 2;
 
   let dataPromise_dna, dataPromise_rna;
   let heatmapData_dna, heatmapData_rna;
@@ -41,7 +42,6 @@
       loaded = true;
     }
   });
-  
   onMount(unsubscribe);
 
 </script>
@@ -78,17 +78,27 @@
       <pre style="display: inline" class="status">ALL</pre>
     {/if}
 
+    <div style="margin-top: 1em; margin-left: 36%;display:inline;">
+      <span> Scale Bar: </span>
+      <input type=number bind:value={scale_max} min=1 max=10>
+      <input type=range bind:value={scale_max} min=1 max=10>
+    </div>
+
     {#if clicked == 'DNA' && heatmapData_dna}
       {#if checked}
-        <PlotlyHeatmap on:heatmap-click propsData={heatmapData_dna} repeatLabels={repeatLabels} TYPE="unique"/>
+        <PlotlyHeatmap on:heatmap-click propsData={heatmapData_dna}
+                       repeatLabels={repeatLabels} scaleMax={scale_max} TYPE="unique"/>
       {:else}
-        <PlotlyHeatmap on:heatmap-click propsData={heatmapData_dna} repeatLabels={repeatLabels} TYPE="all"/>
+        <PlotlyHeatmap on:heatmap-click propsData={heatmapData_dna}
+                       repeatLabels={repeatLabels} scaleMax={scale_max} TYPE="all"/>
       {/if}
     {:else if  clicked == 'RNA' && heatmapData_rna}
       {#if checked}
-        <PlotlyHeatmap on:heatmap-click propsData={heatmapData_rna} repeatLabels={repeatLabels} TYPE="unique"/>
+        <PlotlyHeatmap on:heatmap-click propsData={heatmapData_rna}
+                       repeatLabels={repeatLabels} bind:scaleMax={scale_max} TYPE="unique"/>
       {:else}
-        <PlotlyHeatmap on:heatmap-click propsData={heatmapData_rna} repeatLabels={repeatLabels} TYPE="all"/>
+        <PlotlyHeatmap on:heatmap-click propsData={heatmapData_rna}
+                       repeatLabels={repeatLabels} bind:scaleMax={scale_max} TYPE="all"/>
       {/if}
     {:else}
       <p>Some error has occured!</p>

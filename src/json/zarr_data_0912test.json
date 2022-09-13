@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "Zarr": "https://wangftp.wustl.edu/~scheng/repeat_browser/poster_0912/HeLa-S3_STAT1/ENCFF000XPK.zarr/",
+      "Mode": "Experiment",
+      "Assay": "ChIP-seq",
+      "Biosample_type": "HeLa_S3",
+      "Control": "ENCFF000XOO",
+      "Tissue": "STAT1",
+      "Organism": "homo",
+      "Target": "",
+      "File_accession": "ENCFF000XPK",
+      "id": "ENCFF000XPK"
+    },
+    {
+      "Zarr": "https://wangftp.wustl.edu/~scheng/repeat_browser/poster_0912/K562_IRF1/ENCSR809JSD/ENCFF082OFO.zarr/",
+      "Mode": "Experiment",
+      "Assay": "ChIP-seq",
+      "Biosample_type": "K562",
+      "Control": "ENCFF813MPI",
+      "Tissue": "IRF1",
+      "Organism": "homo",
+      "Target": "",
+      "File_accession": "ENCFF082OFO",
+      "id": "ENCFF082OFO"
+    },
+    {
+      "Zarr": "https://wangftp.wustl.edu/~scheng/repeat_browser/poster_0912/K562_IRF1/ENCSR809JSD/ENCFF399ZSM.zarr/",
+      "Mode": "Experiment",
+      "Assay": "ChIP-seq",
+      "Biosample_type": "K562",
+      "Control": "ENCFF813MPI",
+      "Tissue": "IRF1",
+      "Organism": "homo",
+      "Target": "",
+      "File_accession": "ENCFF399ZSM",
+      "id": "ENCFF399ZSM"
+    },
+    {
+      "Zarr": "https://wangftp.wustl.edu/~scheng/repeat_browser/poster_0912/K562_IRF1/ENCSR854MCV/ENCFF414BQN.zarr/",
+      "Mode": "Experiment",
+      "Assay": "ChIP-seq",
+      "Biosample_type": "K562",
+      "Control": "ENCFF037KTI",
+      "Tissue": "IRF1",
+      "Organism": "homo",
+      "Target": "",
+      "File_accession": "ENCFF414BQN",
+      "id": "ENCFF414BQN"
+    },
+    {
+      "Zarr": "https://wangftp.wustl.edu/~scheng/repeat_browser/poster_0912/K562_IRF1/ENCSR854MCV/ENCFF994LEY.zarr/",
+      "Mode": "Experiment",
+      "Assay": "ChIP-seq",
+      "Biosample_type": "K562",
+      "Control": "ENCFF037KTI",
+      "Tissue": "IRF1",
+      "Organism": "homo",
+      "Target": "",
+      "File_accession": "ENCFF994LEY",
+      "id": "ENCFF994LEY"
+    }
+  ],
+  "repeats": [
+    { "name": "MER125", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER126", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER130", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER135", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "MER136", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "UCON8", "family": "DNA", "class": "DNA", "size": 7 },
+    { "name": "L1M2b", "family": "L1", "class": "LINE", "size": 7},
+    { "name": "L1ME1", "family": "L1", "class": "LINE", "size": 7},
+    { "name": "L1ME2", "family": "L1", "class": "LINE", "size": 7}
+  ]
+}
