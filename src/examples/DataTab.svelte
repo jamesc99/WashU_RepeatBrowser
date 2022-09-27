@@ -27,7 +27,7 @@
     import VirtualList from 'svelte-tiny-virtual-list';
 
     import {Cart} from "../stores/CartStore";
-    import {onDestroy} from "svelte";
+    import {onDestroy, onMount} from "svelte";
     import defaultData from "../json/default_cart_data.json";
     import {getZarrParameters} from '../api/inputdata';
     import {TabixIndexedFile} from "@gmod/tabix";
@@ -46,8 +46,14 @@
     let tmp_url;
     let zarr_url;
 
+    const unsubscribe = Cart.subscribe(async store => {
+        const { data, repeats } = store;
+        cartData = data;
+        cartRepeats = repeats;
+    });
+
     function handleClick(data) {
-        alert(`${data.id} (${data.Assay}) uploaded.`)
+        alert(`${data.id} (${data.Assay}) Uploaded.`)
     }
 
     async function setUn() {
@@ -55,7 +61,9 @@
         const data_json = await getZarrParameters(zarr_url).then(data => {
             handleClick(data);
             console.log(data);
-            Cart.addDataItems([data]);
+            // Cart.addDataItems([data]);
+            console.log($Cart.data);
+            Cart.addDataItems([...new Set([...$Cart.data, data])]);
         });
     }
 
@@ -71,13 +79,7 @@
     //     }
     // }
 
-    const unsubscribe = Cart.subscribe(async store => {
-        const { data, repeats } = store;
-        cartData = data;
-        cartRepeats = repeats;
-    });
-
-    onDestroy(() => {
+    onMount(() => {
         unsubscribe();
     });
 

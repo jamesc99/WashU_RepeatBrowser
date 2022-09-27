@@ -41,7 +41,7 @@
         text-align: center;
         justify-content: center;
         align-items: center;
-        background-color: #fff;
+        background-color: #f7f7f7;
         color: var(--mdc-theme-secondary, #333);
     }
 
@@ -52,7 +52,7 @@
         text-align: center;
         justify-content: center;
         align-items: center;
-        background-color: #fff;
+        background-color: #f7f7f7;
         color: var(--mdc-theme-secondary, #333);
     }
 

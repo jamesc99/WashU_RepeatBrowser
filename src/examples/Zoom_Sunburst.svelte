@@ -53,6 +53,10 @@
         }));
     }
 
+    function color_function(input){
+
+    }
+
     function recoverChildSelected(input) {
         const selected_array = [input.data];
         // selected_array.forEach((element) => {
@@ -90,6 +94,7 @@
 
         let color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length + 1));
 
+
         const root = partition(data);
 
         root.each(d => d.current = d);
@@ -105,7 +110,7 @@
             .selectAll("path")
             .data(root.descendants().slice(1))
             .join("path")
-            .attr("fill", d => { while (d.depth > 1) d = d.parent; return color(d.data.name); })
+            .attr("fill", d => { while (d.depth > 1) d = d.parent; console.log(d.data.name); return color(d.data.name); })
             .attr("fill-opacity", d => arcVisible(d.current) ? (d.children ? 0.6 : 0.4) : 0)
             .attr("pointer-events", d => arcVisible(d.current) ? "auto" : "none")
             .attr("d", d => arc(d.current))
@@ -268,6 +273,11 @@
         background: #fff;
     }
 
+    :global([data-svelte-typeahead]) {
+        margin: 1rem;
+
+    }
+
 </style>
 
 
@@ -280,7 +290,7 @@
 
     <Cell span={4}>
         <div>
-            <h1>#Repeats: {cartRepeats.length}</h1>
+            <h2>#Repeats: {cartRepeats.length}</h2>
 <!--            <VirtualList-->
 <!--                    height={200}-->
 <!--                    width = 'auto'-->
@@ -307,8 +317,12 @@
                 </div>
             </VirtualList>
 
+            <hr>
+
+            <h2>Repeats Search</h2>
             <Typeahead
                     label="Repeats Search"
+                    hideLabel
                     placeholder={`Search Repeats (e.g. "MER125")`}
                     data={REPEAT_list}
                     extract={(item) => item.name}
@@ -318,6 +332,8 @@
                     }}
                     on:clear={() => events = [...events, "clear"]}
             />
+            <hr>
+
         </div>
     </Cell>
 </LayoutGrid>

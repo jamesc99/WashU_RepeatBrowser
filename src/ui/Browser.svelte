@@ -58,6 +58,11 @@
         active = 'Consensus View';
     }
 
+    function gotoGenomeView(event) {
+        combination = event.detail;
+        active = 'Consensus View';
+    }
+
     function ModeChangeExperiments(event){
         if(mode != 'experiments'){
             mode = 'experiments'
@@ -141,7 +146,7 @@
                 <Item
                         href="javascript:void(0)"
                         on:click={() => setActive('Genome View')}
-                        activated={active === 'Genome View' && combination.length != 0}
+                        activated={active === 'Genome View'}
                 >
                     <Graphic class="material-icons" aria-hidden="true">biotech</Graphic>
                     <Text>Genome View</Text>
@@ -278,37 +283,43 @@
                     <h3>Repeat Selection</h3>
                     <Zoom_Sunburst/>
                 </div>
-            {:else if active === "Data View"}
+            {:else if active === "Data View" }
                 <CartComponent />
             {:else if active === "Consensus View"}
-                <ConsensusContainer {combination} />
-                <Button style="display: inline; margin-right: 76%;" on:click={() => {active = "Heatmap"}} touch variant="unelevated">
-                    <Icon class="material-icons">arrow_back</Icon>
-                    <Label>Heatmap</Label>
-                </Button>
-
-                <Button style="display: inline;" on:click={() => {active = "Genome View"}} touch variant="unelevated">
-                    <Label>Genome View</Label>
-                    <Icon class="material-icons">arrow_forward</Icon>
-                </Button>
-            {:else if active === "Genome View"}
-                <Modal>
-                    <GenomeViewContainer {combination} style="margin-bottom: 5%"/>
-                    <Button style="display: inline; margin-right: 74%;" on:click={() => {active = "Heatmap"}} touch variant="unelevated">
+                {#if typeof combination !== "undefined"}
+                    <ConsensusContainer {combination} />
+                    <Button style="display: inline; margin-right: 76%;" on:click={() => {active = "Heatmap"}} touch variant="unelevated">
                         <Icon class="material-icons">arrow_back</Icon>
                         <Label>Heatmap</Label>
                     </Button>
 
-                    <Button style="display: inline" on:click={() => {active = "Consensus View"}} touch variant="unelevated">
-                        <Label>Consensus View</Label>
+                    <Button style="display: inline;" on:click={() => {active = "Genome View"}} touch variant="unelevated">
+                        <Label>Genome View</Label>
                         <Icon class="material-icons">arrow_forward</Icon>
                     </Button>
-                </Modal>
+                {:else }
+                    <p> Click the Heatmap cell first to select data! <p>
+                {/if}
+
+            {:else if active === "Genome View"}
+                {#if typeof combination !== "undefined"}
+                    <Modal>
+                        <GenomeViewContainer {combination} style="margin-bottom: 5%"/>
+                        <Button style="display: inline; margin-right: 70%;" on:click={() => {active = "Heatmap"}} touch variant="unelevated">
+                            <Icon class="material-icons">arrow_back</Icon>
+                            <Label>Heatmap</Label>
+                        </Button>
+
+                        <Button style="display: inline" on:click={() => {active = "Consensus View"}} touch variant="unelevated">
+                            <Label>Consensus View</Label>
+                            <Icon class="material-icons">arrow_forward</Icon>
+                        </Button>
+                    </Modal>
+                {:else }
+                    <p> Click the Heatmap cell first to select data! <p>
+                {/if}
             {/if}
 
-            <pre class="status">Active: {active}</pre>
-            <div style="height: 700px;">&nbsp;</div>
-<!--            And some stuff at the bottom.-->
         </main>
     </AppContent>
 </div>
@@ -319,7 +330,7 @@
     .drawer-container {
         position: relative;
         display: flex;
-        /*height: 700px;*/
+        min-height: 400px;
         max-width: 100%;
         /*border: 1px solid*/
         /*var(--mdc-theme-text-hint-on-background, rgba(0, 0, 0, 0.1));*/

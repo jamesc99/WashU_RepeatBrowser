@@ -50,7 +50,6 @@
   let dataInStore;
   let repeatsInStore;
   let mode = 'files';
-  let ori_mode = 'files';
 
   const unsubscribe = Cart.subscribe(store => {
     const {data, repeats} = store;
@@ -59,8 +58,14 @@
     // console.log(data);
   });
 
+  const data_test = defaultData.data.map(async x => {
+    const _ = await getZarrParameters(x.Zarr).then(d => d);
+    return Promise.resolve(_)
+  })
+
   onMount(() => {
-    Cart.addDataItems(defaultData.data);
+    Promise.all(data_test).then(d => Cart.addDataItems(d));
+    // Cart.addDataItems(defaultData.data);
     Cart.addRepeats(defaultData.repeats);
     console.log("default", defaultData.data);
   })

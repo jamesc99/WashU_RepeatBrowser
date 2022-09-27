@@ -50,7 +50,7 @@
     UUID = uuid.v4(); 
 
     const { data, repeat } = combination;
-    const dataFile = $Cart.data.filter(file => file.File_accession === data);
+    const dataFile = $Cart.data.filter(file => file.id === data);
     // console.log(data, repeat);
     // fetch(`${DATAHUB_MONGO_API}/${experiment}-${subfam}`) // pre-saved data from MONGO
     // .then(res => {
@@ -109,6 +109,7 @@
   {#if loaded}
     <!-- <Slider on:slider-move={handleSliderValue} extent={data.extent} />-->
     <div class="tooltip" id="genome-tooltip" />
+    <h2> {combination.data} - {combination.repeat} </h2>
     {#each dataToRender as item, i}
       <Chromosome on:genome-click={showModal} key={item.key} chr={item.key} data={item.values} />
 <!--      <Chromosome key={item.key} chr={item.key} data={item.values} />-->

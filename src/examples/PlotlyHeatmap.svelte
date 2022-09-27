@@ -44,23 +44,27 @@
   // onDestroy(unsubscribe);
 
   function drawHeatMap(z, repeatLabels, dataLabels, scale_max) {
-    console.log(z);
     let myPlot = document.getElementById('myDiv');
-    const zMax = Math.max(...[].concat(...z));
+    const z_filtered = z.map(array => {
+      let new_array = array.map(n => n || 0);
+      return new_array
+    });
+    const zMax = Math.max(...[].concat(...z_filtered));
 
     const data = [
-    {
-      z: z,
-      x: repeatLabels,
-      y: dataLabels,
-      type: 'heatmap',
-      // colorscale: colorscaleValue,
-      showscale: true,
-      zauto: zMax > scale_max ? false : true,
-      zmax: zMax > scale_max ? scaleMax : zMax,
-      zmin: 0
-    }
+      {
+        z: z,
+        x: repeatLabels,
+        y: dataLabels,
+        type: 'heatmap',
+        // colorscale: colorscaleValue,
+        showscale: true,
+        zauto: zMax > scale_max ? false : true,
+        zmax: zMax > scale_max ? scaleMax : zMax,
+        zmin: 0
+      }
     ];
+    console.log(z_filtered, scale_max);
 
     Plotly.newPlot('myDiv', data, {responsive: true, margin: { l: 100, b: 80, r: 18, t: 40}});
 
