@@ -4,8 +4,8 @@
   import { spanSize } from "./helper";
   import { formatCellInfo, getFiltered } from './data-helper';
   import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
-  import LayoutGrid from '@smui/layout-grid';
-  import Tabulator from 'tabulator-tables';
+  // import LayoutGrid from '@smui/layout-grid';
+  // import Tabulator from 'tabulator-tables';
 
 
   const dispatch = createEventDispatcher();
