@@ -1,62 +1,40 @@
-# svelte app
+# WashU Repeat Browser Input .zarr File Generation
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template-webpack.
+Pipeline for generating .zarr file as the input of [WashU Repetitive Element Browser](https://repeatbrowser.org/)
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+Current Version: `rb_v1.0` Last update: `2022.10.16`
 
-```bash
-npx degit sveltejs/template-webpack svelte-app
-cd svelte-app
-```
+Author: Jiawei Shen (jiaweishen@wustl.edu), Siyuan Cheng(siyuancheng@wustl.edu)
+Advisor: Ting Wang(twang@wustl.edu), Daofeng Li(dli23@wustl.edu)
 
-_Note that you will need to have [Node.js](https://nodejs.org) installed._
+<br />
 
-## Get started
+## Usage:
+### Singularity3 Installation
+Our image has to be run with **Singularity version3+**, you could follow this instruction if you haven`t install Singularity3. <br/>Please [click here](https://github.com/sylabs/singularity/blob/main/INSTALL.md)<br/>(You will need sudo permission to properlly install and configure it, but you can run it without sudo after installation:smiley:)
 
-Install the dependencies...
+### Test data
+There are some sample data
 
-```bash
-cd svelte-app
-npm install
-```
 
-...then start webpack:
 
-```bash
-npm run dev
-```
 
-Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and the page should reload with your changes.
 
-## Deploying to the web
 
-### With [now](https://zeit.co/now)
 
-Install `now` if you haven't already:
 
-```bash
-npm install -g now
-```
 
-Then, from within your project folder:
 
-```bash
-now
-```
 
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
 
-### With [surge](https://surge.sh/)
 
-Install `surge` if you haven't already:
 
-```bash
-npm install -g surge
-```
 
-Then, from within your project folder:
 
-```bash
-npm run build
-surge public
-```
+
+
+
+
+
+
+
