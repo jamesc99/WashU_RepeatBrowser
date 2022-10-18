@@ -4,8 +4,7 @@ Pipeline for generating .zarr file as the input of [WashU Repetitive Element Bro
 
 Current Version: `rb_v1.0` Last update: `2022.10.16`
 
-Author: Jiawei Shen (jiaweishen@wustl.edu), Siyuan Cheng(siyuancheng@wustl.edu)
-Advisor: Ting Wang(twang@wustl.edu), Daofeng Li(dli23@wustl.edu)
+Author: Jiawei Shen (jiaweishen@wustl.edu), Siyuan Cheng(siyuancheng@wustl.edu)<br/>Advisor: Ting Wang(twang@wustl.edu), Daofeng Li(dli23@wustl.edu)
 
 <br />
 
