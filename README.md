@@ -8,7 +8,7 @@ Current Version: `rb_v1.0` Last update: `2022.12.03`
 
 Maintained by [Wang Lab](https://wang.wustl.edu/) at [Washington University School of Medicine](https://medicine.wustl.edu/)
 
-For any question, please contact dli23@wustl.edu :point_left:
+For any question, please contact Daofeng Li dli23@wustl.edu :point_left:
 
 <img src="https://wangftp.wustl.edu/~scheng/repeat_browser/Repeat%20Browser(1).png" width="400" height="200" alt="WashU Repetitive Element Browser"/>
 
