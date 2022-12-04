@@ -15,7 +15,7 @@ For any question, please contact Daofeng Li dli23@wustl.edu :point_left:
 <br />
 
 ## Documentation:
-1. Use the Browser
+1. [Use the Browser](Documentation/Use_the_Browser.md)
     1. Files Selection
         1. Data Selection
         2. Repeats Selection
