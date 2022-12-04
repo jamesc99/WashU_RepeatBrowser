@@ -69,8 +69,17 @@ Then you need to:
 **Step3** Upload the generated .zarr file to WashU Repeat Browser 
 [sample image here]
 
-### Test data
-There are some sample data
-
+### Test Chip-seq data
+There is one Single-end hg38 Chip-seq data for test purpose, they can be downloaded by:
+```
+wget https://wangftp.wustl.edu/~scheng/repeat_browser/sample_data/chip-seq/hg38_chipseq_signal_SE_50.fastq.gz
+wget https://wangftp.wustl.edu/~scheng/repeat_browser/sample_data/chip-seq/hg38_chipseq_input_SE_50.fastq.gz
+```
 
 ### Docker image
+We also provide well-compacted Docker image as alternative choice, which can be downloaded by Docker:
+```
+docker pull sycheng99/repeatbrowser:5.0
+```
+
+
