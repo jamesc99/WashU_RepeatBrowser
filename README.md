@@ -23,22 +23,11 @@ For any question, please contact Daofeng Li dli23@wustl.edu :point_left:
         1. Heatmap
         2. Consensus View
         3. Genome View
-2. Data processing
+2. [Data processing](Documentation/Data_Processing.md)
 
 
 
 
-
-Pipeline for generating .zarr file as the input of [WashU Repetitive Element Browser](https://repeatbrowser.org/)
-
-<br />
-
-## Usage:
-### Singularity3 Installation
-Our image has to be run with **Singularity version3+**, you could follow this instruction if you haven`t install Singularity3. <br/>Please [click here](https://github.com/sylabs/singularity/blob/main/INSTALL.md)<br/>(You will need sudo permission to properlly install and configure it, but you can run it without sudo after installation:smiley:)
-
-### Test data
-There are some sample data
 
 
 
