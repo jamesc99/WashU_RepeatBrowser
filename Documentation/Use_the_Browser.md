@@ -1,6 +1,10 @@
 # Use the Repeat Browser
 
-## <h2 id="1">Files Selection</h2>
+Instruction on how to navigate [WashU Repetitive Element Browser](https://repeatbrowser.org/)
+
+## Main Page
+
+## Files Selection
 
 ### Data Selection
 ### Repeats Selection
