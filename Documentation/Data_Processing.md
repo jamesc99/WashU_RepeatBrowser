@@ -1,7 +1,7 @@
 # Data Processing
 Pipeline for generating .zarr file as the input of [WashU Repetitive Element Browser](https://repeatbrowser.org/)
 
-Current Version: `rb_v5.0` Last update: `2022.12.03`
+Current Version: `rb_v5.0` Last update: `2023.03.11`
 
 ## Usage:
 For easy and reproducible usage, we have compacted the data processing pipeline into Docker and Singularity images. We highly recommend using Singularity image for non-root users.
