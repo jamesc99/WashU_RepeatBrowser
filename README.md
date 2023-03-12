@@ -4,7 +4,7 @@
 **[Interactive Visualization Browser for Transposable Elements (TEs) community](https://repeatbrowser.org/)**
 <br/>
 
-Current Version: `rb_v1.0` Last update: `2022.12.03`
+Current Version: `rb_v1.0` Last update: `2023.03.11`
 
 Maintained by [Wang Lab](https://wang.wustl.edu/) at [Washington University School of Medicine](https://medicine.wustl.edu/)
 
