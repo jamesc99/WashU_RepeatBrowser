@@ -63,13 +63,22 @@ Heatmap view of enrichment scores of datasets on TE subfamilies. Users can click
 :bangbang:Users can click a specific cell and jump to the Consensus View panel (GIF above).
 
 ![Consensus View](https://wangftp.wustl.edu/~scheng/repeat_browser/documentation/DataVisual_ConsensusVIew.png)
-Consensus View panel (above) displays epigenomic data anchored on a TE consensus sequence. Both unique reads and multi-reads can be displayed.
+Consensus View panel (above) displays epigenomic data anchored on a TE consensus sequence. Both unique reads and multi-reads can be displayed.<br/>
 
-
-
+You can explore different biological meanings with different assay types, like open chromatin regions with ATAC-seq data, gene expression level with CAGE-seq, and TF binding sites with ChIP-seq data. The specific TE subfamily on different datasets can also be compared through the **Add Track** function, and the All reads and Uniquely-mapped reads can also be explored. Besides, the genome coverage and raw consensus sequence are also provided for further exploration.
+:bangbang:(demo gif needed)
 
 ### Genome View
+:bangbang:Users can click the **Genome View** on the left panel or the right-buttom button to jump to the Genome View panel (GIF above).
 
+![Genome View](https://wangftp.wustl.edu/~scheng/repeat_browser/documentation/DataVisual_GenomeView.png)
+Genome view (above) is a bird’s eye view of different locations of TE copies on the genome. A filter sets the threshold of enrichment scores of corresponding TE copies is provided.
+
+You can get the distribution of the uniquely-mapped reads of specific TE subfamily on Genome View and different shades represent different RPKM values (the darker the higher), where you adjust the threshold via the side bar to only show selected reads. The specific TE subfamily on different datasets can also be compared through the **Add Genome Copies** function, where you can explore the expression differences among different datasets. 
+:bangbang:(demo gif needed)
+
+Furthermore, to enhance the utility of Repeat Browser, we also link the Repeat Browser with WashU Epigenome Browser where users can choose view the interested individual TE copies on the WashU Epigenome Browser, using the **Region set View** function by which we can display multiple genomic locations side by side,optionally with customizable upstream and  downstream flanking regions (below).
+![Region View Set](https://wangftp.wustl.edu/~scheng/repeat_browser/documentation/HeLa-S3_STAT1_MER41B_region_view_set.png)
 
 
 
