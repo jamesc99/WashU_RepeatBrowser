@@ -60,7 +60,6 @@ Heatmap view of enrichment scores of datasets on TE subfamilies. Users can click
 
 
 ### Consensus View
-![Jump to Consensus View](https://github.com/jamesc99/WashU_RepeatBrowser/tree/main/Documentation/Heatmap_jumpto_Consensus.gif)
 :bangbang:Users can click a specific cell and jump to the Consensus View panel (GIF above).
 
 ![Consensus View](https://wangftp.wustl.edu/~scheng/repeat_browser/documentation/DataVisual_ConsensusVIew.png)
