@@ -52,7 +52,7 @@ Data Visualization page is the main function of WashU Repeat Browser.
 ![Heatmap View](https://wangftp.wustl.edu/~scheng/repeat_browser/documentation/DataVisual_Heatmap.png)
 Heatmap View (above) is the first plot inbeded in WashU Repeat Browser. It provides the functions where users can cluster columns(repeats) or rows(datasets), or both, as well as re-order the heatmap by any of the methods, alphabetic order, rank by sum, or rank by variance. You can also set the opacity and the number of rows you want to show by the side bar. The different colors at the edge of the matrix denote the different class/family (for the column) and different datasets (for the row).<br/>
 
-:bangbang:(demo gif needed)
+:bangbang:(demo gif needed, Heatmap_demo.gif)
 
 You can also switch to the CAGE-seq heatmap through the Assay Type drop down list.<br/>
 Heatmap view of enrichment scores of datasets on TE subfamilies. Users can click a specific cell where each cell denotes ratio of average score or RPKM as per below. 
@@ -60,22 +60,22 @@ Heatmap view of enrichment scores of datasets on TE subfamilies. Users can click
 
 
 ### Consensus View
-:bangbang:Users can click a specific cell and jump to the Consensus View panel (GIF above).
+:bangbang:Users can click a specific cell and jump to the Consensus View panel (GIF above, Heatmap_jumpto_Consensus.gif).
 
 ![Consensus View](https://wangftp.wustl.edu/~scheng/repeat_browser/documentation/DataVisual_ConsensusVIew.png)
 Consensus View panel (above) displays epigenomic data anchored on a TE consensus sequence. Both unique reads and multi-reads can be displayed.<br/>
 
 You can explore different biological meanings with different assay types, like open chromatin regions with ATAC-seq data, gene expression level with CAGE-seq, and TF binding sites with ChIP-seq data. The specific TE subfamily on different datasets can also be compared through the **Add Track** function, and the All reads and Uniquely-mapped reads can also be explored. Besides, the genome coverage and raw consensus sequence are also provided for further exploration.
-:bangbang:(demo gif needed)
+:bangbang:(demo gif needed, Consensus_demo.gif)
 
 ### Genome View
-:bangbang:Users can click the **Genome View** on the left panel or the right-buttom button to jump to the Genome View panel (GIF above).
+:bangbang:Users can click the **Genome View** on the left panel or the right-buttom button to jump to the Genome View panel (GIF above, Jumpto_Genomeview.gif).
 
 ![Genome View](https://wangftp.wustl.edu/~scheng/repeat_browser/documentation/DataVisual_GenomeView.png)
 Genome view (above) is a bird’s eye view of different locations of TE copies on the genome. A filter sets the threshold of enrichment scores of corresponding TE copies is provided.
 
 You can get the distribution of the uniquely-mapped reads of specific TE subfamily on Genome View and different shades represent different RPKM values (the darker the higher), where you adjust the threshold via the side bar to only show selected reads. The specific TE subfamily on different datasets can also be compared through the **Add Genome Copies** function, where you can explore the expression differences among different datasets. 
-:bangbang:(demo gif needed)
+:bangbang:(demo gif needed, Genomeview_demo.gif)
 
 Furthermore, to enhance the utility of Repeat Browser, we also link the Repeat Browser with WashU Epigenome Browser where users can choose view the interested individual TE copies on the WashU Epigenome Browser, using the **Region set View** function by which we can display multiple genomic locations side by side,optionally with customizable upstream and  downstream flanking regions (below).
 ![Region View Set](https://wangftp.wustl.edu/~scheng/repeat_browser/documentation/HeLa-S3_STAT1_MER41B_region_view_set.png)
